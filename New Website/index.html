@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Anant Jain</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+		</script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<style>
+			div#header {
+				background-color: rgba(255, 255, 255, 0.85);
+				width: 100%;
+				height: 60px;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-backdrop-filter: blur(10px);
+				z-index: 500;
+			}
+			
+			div#headerTitle {
+				height: 100%;
+				
+				background-color: transparent;
+				margin-left: 0px;
+				
+				display: inline-block;
+				float: left;
+			}
+			
+			div#headerContent {
+				max-width: 960px;
+				min-width: 750px;
+				width: 100%;
+				height: 100%;
+				
+				background-color: transparent;
+								
+				margin-left: auto;
+				margin-right: auto;
+				
+				display: table;
+			}
+			
+			img#titleProfile {
+				height: 40px;
+				width: 40px;
+				border-radius: 20px;
+				float: left;
+				
+				margin-top: 10px;
+/* 				margin-left: 10px;				 */
+			}
+			
+			h1#title {
+				font-family: "Montserrat", sans-serif;
+				font-weight: normal;
+				margin: 13px 13px auto 13px;
+				float: left;
+				font-size: 20pt;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+			
+			ul#navigation {
+				float: right;
+				margin-top: 20px;
+/* 				margin-right: 10px; */
+			}
+			
+			li#navigation {
+			    display: inline;
+			    font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+				font-weight: normal;
+				padding: 2px 5px 2px 5px;
+				margin: 0px 5px 0xp 5px;
+			}
+			
+			a#navigationTitle {
+				text-decoration: none;
+				color: black;
+				
+				-webkit-transition: color 0.2s;
+			}
+			a#navigationTitle img {
+				opacity: 1.0;
+				-webkit-transition: opacity 0.2s;
+			}
+			a#navigationTitle:visited {
+				text-decoration: none;
+				color: black;
+			}
+			a#navigationTitle:hover {
+				color: #666666;
+				-webkit-transition: color 0.2s;
+			}
+			a#navigationTitle:hover img {
+				opacity: 0.8;
+				-webkit-transition: opacity 0.2s;
+			}
+			
+			a#navigationSubtitle {
+				text-decoration: none;
+				color: black;
+				padding: 3px 6px 3px 6px;
+				border-radius: 3px;
+				
+				-webkit-transition: background-color 0.1s, color 0.1s;
+			}
+			a#navigationSubtitle:visited {
+				color: black;
+				border-radius: 3px;
+			}
+			a#navigationSubtitle:hover {
+				background-color: #DDDDDD;
+				color: #666666;
+				border-radius: 3px;
+				
+				-webkit-transition: background-color 0.1s, color 0.1s;
+			}
+			a#navigationSubtitle:active {
+				background-color: #007AFF;
+				color: white;
+				border-radius: 3px;
+				
+				-webkit-transition: background-color 0.1s, color 0.1s;
+			}
+			
+			body, html {
+				min-width: 750px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			div#hero {
+				margin-top: 60px;
+				height: 450px;
+				width: 100%;
+				
+				position: relative;
+				
+				background-image: url("hero.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				
+				z-index: 450;
+			}
+			img#heroTextBackground {
+				height: 100%;
+				width: 100%;
+			}
+			h1#heroTitle {
+				font-family: "Catamaran", sans-serif;
+				font-weight: 300;
+				font-size: 45px;
+				width: 100%;
+				
+				margin-bottom: 0px;
+								
+				color: white;
+			}
+			h1#heroTitle strong {
+				font-weight: 700;
+			}
+			h2#heroDetail {
+				font-family: "Catamaran", sans-serif;
+				font-weight: 300;
+				font-size: 25px;
+				width: 100%;
+				text-align: left;
+				
+				margin-top: 0px;
+				
+				color: white;
+			}
+			h2#heroDetail strong {
+				font-weight: 700 !important;
+			}
+			div#heroContent {
+				height: 100%;
+				width: 100%;
+				max-width: 960px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+			div#heroText {
+				display: inline-block;
+				width: 100%;
+				position: absolute;
+				bottom: 0px;				
+			}
+			
+			div#bulletFacts {
+				width: 100%;
+				position: relative;
+			}
+			
+			div#bulletFactsContent {
+				width: 100%;
+				max-width: 960px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			ul#bulletFacts {
+				margin: 50px auto;
+			}
+			
+			ul#bulletFacts li {
+				font-family: "Catamaran", sans-serif;
+				font-size: 12pt;
+				font-weight: 500;
+			}
+			
+			ul#bulletFacts li span {
+				font-size: 16pt;
+			}
+			
+			ul#bulletFacts li span strong {
+				font-weight: 700;
+			}
+			
+			div#links {
+				width: 100%;
+				height: 100px;
+				position: relative;
+				background-color: #222222;
+			}
+			
+			div#linksContent {
+				width: 100%;
+				max-width: 960px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				padding-top: 30px;
+			}
+			
+			img#link {
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				margin: 0px 4px 0px 4px;
+			}
+			
+		</style>
+		
+		<script>
+			$(document).ready(function() {
+				if ($("div#header").css("-webkit-backdrop-filter") == null) {
+					$("div#header").css({"background-color": "rgba(255, 255, 255, 0.99)"});
+				}
+			});
+			$(window).on("scroll", function() {
+				if ($(window).scrollTop() > 3) {
+					$("div#header").css({"box-shadow": "0px 1px 1px #EEEEEE"});
+				}
+				else {
+					$("div#header").css({"box-shadow": "initial"});
+				}
+			});
+		</script>
+	</head>
+	<body style="display: inline-block;">
+		<div id="header">
+			<div id="headerContent">
+				<a href="index.html" id="navigationTitle">
+					<div id="headerTitle">
+						<img src="Profile Header Image.jpg" id="titleProfile">
+						<h1 id="title">ANANT JAIN</h1>
+					</div>
+				</a>
+				<ul id="navigation">
+					<li id="navigation"><a id="navigationSubtitle" href="">About Me</a></li>
+					<li id="navigation"><a id="navigationSubtitle" href="">Projects</a></li>
+					<li id="navigation"><a id="navigationSubtitle" href="">Photography</a></li>
+					<li id="navigation"><a href="photography.html" id="navigationSubtitle">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="hero">
+			<img src="Image Text Background.png" id="heroTextBackground">
+			<div id="heroContent">
+				<div id="heroText">
+					<h1 id="heroTitle"><strong>Hi.</strong> I'm Anant.</h1>
+					<h2 id="heroDetail">I'm a <strong>full-stack iOS developer</strong> with experience in <strong>machine learning</strong> and <strong>Big Data analytics</strong>. I'm also a hobbyist photographer.</h2>
+				</div>
+			</div>
+		</div>
+		<div id="bulletFacts">
+			<div id="bulletFactsContent">
+				<ul id="bulletFacts">
+					<li><span>Presidential Scholar at the University of Southern California studying Computer Science (class of 2020)</span></li>
+					<li><span>Proficient in <strong>Swift</strong>, <strong>C++</strong>, <strong>Objective-C</strong>, <strong>Python</strong>, <strong>Java</strong>, and <strong>R</strong></span></li>
+					<li><span>More to come...</span></li>
+				</ul>
+			</div>
+		</div>
+		<div id="links">
+			<div id="linksContent">
+				<img src="facebook.svg" id="link">
+				<img src="twitter.svg" id="link">
+				<img src="github.svg" id="link">
+				<img src="linkedin.svg" id="link">
+				<img src="instagram.svg" id="link">
+			</div>
+		</div>
+	</body>
+</html>
