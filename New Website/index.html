@@ -246,7 +246,7 @@
 				padding-top: 30px;
 			}
 			
-			img#link {
+			.link {
 				height: 40px;
 				width: 40px;
 				display: inline-block;
@@ -254,6 +254,43 @@
 			}
 			
 		</style>
+		
+		<script>
+			function highlightButton(button) {
+				var facebook = document.getElementById("facebook");
+				var twitter = document.getElementById("twitter");
+				var github = document.getElementById("github");
+				var linkedin = document.getElementById("linkedin");
+				var instagram = document.getElementById("instagram");
+				
+				var allButtons = [facebook, twitter, github, linkedin, instagram];
+								
+				for (var i = 0; i < allButtons.length; i++) {
+					if (button.id != allButtons[i].id) {
+						allButtons[i].style["opacity"] = "0.5";
+						allButtons[i].style["-webkit-transition"] = "opacity 0.3s";
+					}
+				}
+				
+				button.style["opacity"] = "1.0";
+				button.style["-webkit-transition"] = "opacity 0.3s";
+			}
+			
+			function unhighlightAllButtons() {
+				var facebook = document.getElementById("facebook");
+				var twitter = document.getElementById("twitter");
+				var github = document.getElementById("github");
+				var linkedin = document.getElementById("linkedin");
+				var instagram = document.getElementById("instagram");
+				
+				var allButtons = [facebook, twitter, github, linkedin, instagram];
+				
+				for (var i = 0; i < allButtons.length; i++) {
+					allButtons[i].style["opacity"] = "1.0";
+					allButtons[i].style["-webkit-transition"] = "opacity 0.3s";
+				}
+			}
+		</script>
 		
 		<script>
 			$(document).ready(function() {
@@ -308,11 +345,11 @@
 		</div>
 		<div id="links">
 			<div id="linksContent">
-				<img src="facebook.svg" id="link">
-				<img src="twitter.svg" id="link">
-				<img src="github.svg" id="link">
-				<img src="linkedin.svg" id="link">
-				<img src="instagram.svg" id="link">
+				<a href="https://www.facebook.com/anant.jain.5243" class="imgLink"><img src="facebook.svg" class="link" id="facebook" onmouseover="highlightButton(this)" onmouseout="unhighlightAllButtons()"></a>
+				<a href="https://twitter.com/jainanant98" class="imgLink"><img src="twitter.svg" class="link" id="twitter" onmouseover="highlightButton(this)" onmouseout="unhighlightAllButtons()"></a>
+				<a href="https://github.com/janant" class="imgLink"><img src="github.svg" class="link" id="github" onmouseover="highlightButton(this)" onmouseout="unhighlightAllButtons()"></a>
+				<a href="https://www.linkedin.com/in/anantjain1" class="imgLink"><img src="linkedin.svg" class="link" id="linkedin" onmouseover="highlightButton(this)" onmouseout="unhighlightAllButtons()"></a>
+				<a href="https://www.instagram.com/cuppaswift/" class="imgLink"><img src="instagram.svg" class="link" id="instagram" onmouseover="highlightButton(this)" onmouseout="unhighlightAllButtons()"></a>
 			</div>
 		</div>
 	</body>
