@@ -30,7 +30,7 @@
 }
 
 div#header {
-	background-color: rgba(255, 255, 255, 0.90);
+	background-color: rgba(255, 255, 255, 0.87);
 	width: 100%;
 	height: 60px;
 	position: fixed;
@@ -153,10 +153,20 @@ body, html {
 	min-width: 750px;
 	margin: 0;
 	padding: 0;
+	height: 100%;
+}
+
+div#headerDiv {
+	height: 60px;
+	width: 100%;
+}
+
+div#container {
+	min-height:100%;
+    position:relative;
 }
 
 div#hero {
-	margin-top: 60px;
 	height: 700px;
 	width: 100%;
 	
@@ -330,35 +340,14 @@ a#downloadResumeLink:active h3 {
 	-webkit-transition: color 0.15s;
 }
 
-div#otherLinks {
-	width: 100%;
-	height: 100px;
-	position: relative;
-	background-color: #222222;
-}
-
-div#otherLinksContent {
-	width: 100%;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	padding-top: 30px;
-}
-
-.link {
-	height: 40px;
-	width: 40px;
-	display: inline-block;
-	margin: 0px 4px 0px 4px;
-}
-
 div#links {
 	width: 100%;
 	height: 500px;
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	
+	padding-bottom: 100px;
 }
 
 div#linksContent {
@@ -428,6 +417,31 @@ a.linksItemLink h3:active {
 	text-decoration: none;
 	-webkit-transition: color 0.15s;
 }
+
+div#otherLinks {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	background-color: #222222;
+	bottom: 0;
+}
+
+div#otherLinksContent {
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.link {
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	margin: 0px 4px 0px 4px;
+}
+
 
 @media (max-width: 1600px) {
     div#hero {
