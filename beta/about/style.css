@@ -177,8 +177,7 @@ div#container {
 
 div#aboutMeContainer {
 	padding-bottom: 100px;
-	height: 300px;
-	background-color: red;
+	height: 1200px;
 }
 
 div#aboutMeContent {
@@ -187,8 +186,47 @@ div#aboutMeContent {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	
+	background-color: rgba(200, 200, 200, 1.0);
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+div#profileImage {
+	width: 52%;
+	height: 1000px;
+	margin: 50px auto auto 20px;
+	
+	background-color: red;
+}
+
+div#profileText {
+	width: 39%;
+	height: 500px;
+	margin: 50px 20px auto auto;
+	
 	background-color: blue;
 }
+
+h1#aboutMeTitle {
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	letter-spacing: 4px;
+	font-size: 30pt;
+	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+p.aboutMeText {
+	width: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+}
+
 
 div#otherLinks {
 	width: 100%;
