@@ -192,11 +192,11 @@ div#aboutMeContent {
 }
 
 img#profileImage {
-	width: 52%;
-	height: auto;
+	width: 500px;
+	height: 750px;
 	
 	display: block;
-	margin: 50px auto auto auto;
+	margin: 50px auto auto 5%;
 }
 
 div#profileText {
@@ -213,9 +213,6 @@ h1#aboutMeTitle {
 	
 	margin-top: 0px;
 	margin-bottom: 0px;
-	
-	word-wrap: break-word;
-	white-space: normal;
 }
 
 p.aboutMeText {
@@ -257,6 +254,13 @@ div#otherLinksContent {
 }
 
 @media (max-width: 970px) {
+	img#profileImage {
+		margin-right: 20px;
+	}
+	div#profileText {
+		margin-left: 20px;
+	}
+	
     img#titleProfile {
 		margin-left: 10px;				
 	}
@@ -275,5 +279,12 @@ div#otherLinksContent {
 	}
 	ul#bulletFacts {
 		margin-right: 10px;
+	}
+}
+
+@media (max-width: 800px) {
+	img#profileImage {
+		width: 400px;
+		height: 600px;
 	}
 }
