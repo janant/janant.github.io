@@ -177,7 +177,6 @@ div#container {
 
 div#photographyContainer {
 	padding-bottom: 100px;
-	height: 300px;
 }
 
 div#photographyContent {
@@ -188,8 +187,34 @@ div#photographyContent {
 	margin-right: auto;
 }
 
-h1#photographyTitle {
+div.categoryRow {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	
 	width: 100%;
+	max-width: 960px;
+	
+	display: flex;
+	align-items: center;
+}
+
+div.categoryLeft {
+	width: 100%;
+	background-color: #DDDDDD;
+	
+	margin-left: 0px;
+	margin-right: 10px;
+}
+div.categoryRight {
+	width: 100%;
+	background-color: #DDDDDD;
+	
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+h1#photographyTitle {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 
@@ -198,7 +223,6 @@ h1#photographyTitle {
 }
 
 p.photographyInfo {
-	width: 100%;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 }
@@ -234,6 +258,23 @@ div#otherLinksContent {
 }
 
 @media (max-width: 970px) {
+	h1#photographyTitle {
+		margin-left: 20px;
+		margin-left: 20px;
+	}
+	
+	p.photographyInfo {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	div.categoryLeft {
+		margin-left: 20px;
+	}
+	div.categoryRight {
+		margin-right: 20px;
+	}
+
     img#titleProfile {
 		margin-left: 10px;
 	}
@@ -254,3 +295,27 @@ div#otherLinksContent {
 		margin-right: 10px;
 	}
 }
+
+/*
+@media (max-width: 800px) {
+	div.categoryRow {
+		display: initial;
+		align-items: initial;
+	}
+	
+	div.categoryLeft {
+		background-color: #DDDDDD;
+		
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	div.categoryRight {
+		background-color: #DDDDDD;
+		
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+}
+*/

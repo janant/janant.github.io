@@ -61,4 +61,13 @@ $(document).ready(function() {
 			$("div#header").css({"box-shadow": "initial"});
 		}
 	});
+	
+	$(window).on("resize", function() {
+		$(".categoryLeft").each(function( index ) {
+			$(this).height($(this).width());
+		});
+		$(".categoryRight").each(function( index ) {
+			$(this).height($(this).width());
+		});
+	}).trigger("resize");
 });
