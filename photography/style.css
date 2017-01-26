@@ -253,6 +253,10 @@ a.categoryLink {
 	text-decoration: none;
 	color: white;
 }
+a.categoryLink:hover h2.categoryTitle {
+	text-shadow: 0px 1px 17px black;
+	-webkit-animation: text-shadow 0.15s;
+}
 a.categoryLink:visited {
 	text-decoration: none;
 	color: white;

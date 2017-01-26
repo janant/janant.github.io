@@ -210,9 +210,9 @@ hr.divider {
 	width: calc(100% - 20px);
 	max-width: 960px;
 	margin-top: 60px;
-	height: 0.3px;
+	height: 0.5px;
 	border: none;
-	background-color: #333;
+	background-color: #8b8b8b;
 }
 
 h2.projectsGroupTitle {
