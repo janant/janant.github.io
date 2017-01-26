@@ -175,11 +175,11 @@ div#container {
     position:relative;
 }
 
-div#photographyContainer {
+div#photosContainer {
 	padding-bottom: 100px;
 }
 
-div#photographyContent {
+div#photosContent {
 	height: 100%;
 	width: 100%;
 	max-width: 960px;
@@ -188,44 +188,21 @@ div#photographyContent {
 	
 	padding-bottom: 50px;
 }
-
-div.categoryRow {
+div.photoBlock {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
 	
 	width: 100%;
 	max-width: 960px;
-	
-	display: flex;
-	align-items: center;
 }
 
-div.categoryLeft {
+div.category {
 	width: 100%;
 	background-color: #DDDDDD;
 	
 	margin-left: 0px;
 	margin-right: 10px;
-	
-	border-radius: 4px;
-	
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-div.categoryRight {
-	width: 100%;
-	background-color: #DDDDDD;
-	
-	margin-left: 10px;
-	margin-right: 0px;
 	
 	border-radius: 4px;
 	
@@ -284,19 +261,13 @@ h2.categoryTitle {
 	text-shadow: 0px 1px 20px black;
 }
 
-h1#photographyTitle {
+h1#sectionTitle {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 
 	letter-spacing: 4px;
-	font-size: 30pt;
-}
-
-p.photographyInfo {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	
-	margin-bottom: 30px;
+	font-size: 25pt;
+	color: #8b8b8b
 }
 
 div#otherLinks {
@@ -330,15 +301,6 @@ div#otherLinksContent {
 }
 
 @media (max-width: 970px) {
-	h1#photographyTitle {
-		margin-left: 20px;
-		margin-left: 20px;
-	}
-	
-	p.photographyInfo {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
 
 	div.categoryLeft {
 		margin-left: 20px;
