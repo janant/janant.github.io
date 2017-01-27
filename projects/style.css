@@ -210,7 +210,7 @@ hr.divider {
 	width: calc(100% - 20px);
 	max-width: 960px;
 	margin-top: 60px;
-	height: 0.5px;
+	height: 1px;
 	border: none;
 	background-color: #8b8b8b;
 }
