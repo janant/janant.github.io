@@ -218,8 +218,10 @@ div#footer {
 	bottom: 0;
 }
 
-img#creditsHeart {
-
+img.creditsImg {
+	display: inline-block;
+	position: relative;
+	top: 3px;
 }
 
 @media (max-width: 970px) {
