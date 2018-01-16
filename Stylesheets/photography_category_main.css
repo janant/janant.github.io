@@ -1,5 +1,5 @@
 div#photosContainer {
-	padding-bottom: 100px;
+	padding-bottom: 160px;
 }
 
 div#photosContent {
@@ -8,7 +8,7 @@ div#photosContent {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	padding-bottom: 50px;
 }
 
@@ -20,7 +20,7 @@ h1.sectionTitle {
 	font-size: 23pt;
 	color: #222222;
 	text-align: left;
-	
+
 	margin-bottom: 15px;
 	margin-left: 1px;
 }
@@ -31,7 +31,7 @@ hr.divider {
 	height: 1px;
 	border: none;
 	background-color: #999999;
-	
+
 	margin-bottom: 13px;
 }
 
@@ -39,7 +39,7 @@ div.photoBlock {
 	margin-left: 3px;
 	margin-right: 3px;
 	margin-bottom: 80px;
-	
+
 	max-width: 960px;
 }
 img.photo {
@@ -50,7 +50,7 @@ img.photo {
 div.photoInfo {
 	width: 100%;
 	height: 20px;
-	
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -61,16 +61,16 @@ img.locationIcon {
 }
 p.locationText {
 	display: inline;
-	
+
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 	font-size: 13pt;
-	
+
 	padding-bottom: 6px;
 	margin-left: 10px;
-	
+
 	color: #888888;
-	
+
 	margin-bottom: 10px;
 }
 
@@ -78,21 +78,21 @@ div.otherCategories {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 	width: 100%;
 	max-width: 960px;
 }
 
 div.category {
 	width: 100%;
-	
+
 	margin-right: 15px;
-	
+
 	border-radius: 4px;
-	
+
 	background-size: cover;
 	background-repeat: no-repeat;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -106,12 +106,12 @@ div#leftMostCategory {
 div#rightMostCategory {
 	margin-right: 3px;
 }
-div.categoryHighlight {	
+div.categoryHighlight {
 	width: 100%;
 	height: 100%;
-	
+
 	background-color: transparent;
-		
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -143,15 +143,15 @@ a.categoryLink:active div {
 
 h2.categoryTitle {
 	color: white;
-	
+
 	font-family: 'Teko', sans-serif;
 	font-size: 30pt;
-	
+
 	text-shadow: 0px 1px 20px black;
 }
 
 @media (max-width: 970px) {
-	
+
 	div.photoBlock {
 		margin-left: 10px;
 		margin-right: 10px;
@@ -163,7 +163,7 @@ h2.categoryTitle {
 	div#rightMostCategory {
 		margin-right: 10px;
 	}
-	
+
 	hr.divider {
 		width: calc(100% - 22px);
 	}

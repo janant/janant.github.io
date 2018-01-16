@@ -1,5 +1,5 @@
 div#aboutMeContainer {
-	padding-bottom: 100px;
+	padding-bottom: 160px;
 }
 
 div#aboutMeContent {
@@ -8,7 +8,7 @@ div#aboutMeContent {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 50px;
@@ -17,7 +17,7 @@ div#aboutMeContent {
 img#profileImage {
 	width: 500px;
 	height: 750px;
-	
+
 	display: block;
 	margin: 50px auto auto 5%;
 }
@@ -33,7 +33,7 @@ h1#aboutMeTitle {
 
 	letter-spacing: 4px;
 	font-size: 30pt;
-	
+
 	margin-top: 0px;
 	margin-bottom: 0px;
 }

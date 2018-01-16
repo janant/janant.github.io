@@ -1,5 +1,5 @@
 div#photographyContainer {
-	padding-bottom: 100px;
+	padding-bottom: 160px;
 }
 
 div#photographyContent {
@@ -8,7 +8,7 @@ div#photographyContent {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	padding-bottom: 50px;
 }
 
@@ -16,10 +16,10 @@ div.categoryRow {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
-	
+
 	width: 100%;
 	max-width: 960px;
-	
+
 	display: flex;
 	align-items: center;
 }
@@ -27,15 +27,15 @@ div.categoryRow {
 div.categoryLeft {
 	width: 100%;
 	background-color: #DDDDDD;
-	
+
 	margin-left: 0px;
 	margin-right: 10px;
-	
+
 	border-radius: 4px;
-	
+
 	background-size: cover;
 	background-repeat: no-repeat;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -46,15 +46,15 @@ div.categoryLeft {
 div.categoryRight {
 	width: 100%;
 	background-color: #DDDDDD;
-	
+
 	margin-left: 10px;
 	margin-right: 0px;
-	
+
 	border-radius: 4px;
-	
+
 	background-size: cover;
 	background-repeat: no-repeat;
-	
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -62,12 +62,12 @@ div.categoryRight {
 	-ms-user-select: none;
 	user-select: none;
 }
-div.categoryHighlight {	
+div.categoryHighlight {
 	width: 100%;
 	height: 100%;
-	
+
 	background-color: transparent;
-		
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -103,11 +103,11 @@ a.categoryLink:active div {
 
 h2.categoryTitle {
 	color: white;
-	
+
 	font-family: 'Teko', sans-serif;
 	font-size: 45pt;
 	letter-spacing: 2px;
-	
+
 	text-shadow: 0px 1px 20px black;
 }
 
@@ -122,7 +122,7 @@ h1#photographyTitle {
 p.photographyInfo {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
-	
+
 	margin-bottom: 30px;
 }
 
@@ -131,7 +131,7 @@ p.photographyInfo {
 		margin-left: 20px;
 		margin-left: 20px;
 	}
-	
+
 	p.photographyInfo {
 		margin-left: 20px;
 		margin-right: 20px;
