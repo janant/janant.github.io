@@ -159,7 +159,7 @@ h6.regularNavigationLabel {
   font-size: 12pt;
 
   padding: 2px 5px 2px 5px; /* Spacing for highlight */
-	margin: 0px 0px 0px 15px; /* Spacing between labels */
+	margin: 0px 7px 0px 7px; /* Spacing between labels */
 }
 
 /* Link animations */
