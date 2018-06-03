@@ -1,0 +1,326 @@
+/* MARK: Fonts */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+/* MARK: CSS variables */
+
+:root {
+  /* Variables to manage the navigation bar height */
+  /* On mobile displays, the navigation bar becomes compact */
+  --regularNavBarHeight: 60px;
+  --compactNavBarHeight: 45px;
+
+  /* Variables to manage the height of the drop down navigation menu */
+  --regularDropDownHeight: 0px; /* Don't display on regular width */
+  --compactCollapsedDropDownHeight: 30px; /* Just show the expand button indicator */
+  --compactExpandedDropDownHeight: 195px; /* Full menu height */
+
+  /* The maximum width for content that stretches the width of the page */
+  --maxContentWidth: 1200px;
+  --compactContentMargin: 10px; /* Left/right margin when content is compact */
+}
+
+/* MARK: General styles */
+
+div.mainContent {
+  /* Fills up to the max content width */
+  max-width: var(--maxContentWidth);
+
+  /* Centered */
+  margin: 0px auto;
+}
+
+/* Remove the default margin on the body */
+body {
+  margin: 0;
+}
+
+/* MARK: Navigation bar styles */
+
+/* Container for the navigation bar to push all content underneath it */
+div#navigationBarContainer {
+  height: calc(var(--regularNavBarHeight) + var(--regularDropDownHeight))
+}
+
+/* Navigation bar at the top of each page */
+div#navigationBar {
+  /* Pins to the top and stretches to the edges */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  /* Sticks the navigation bar at the front */
+  z-index: 500;
+
+  /* Adds the white blur effect */
+  background-color: rgba(255, 255, 255, 0.87);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+div#navigationBarContent {
+  /* Adjusts automatically as width becomes compact */
+  height: var(--regularNavBarHeight);
+
+  /* Makes layout of header on left, navigation on right easier */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div#navigationDropDownMenu {
+  height: var(--regularDropDownHeight);
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* MARK: Header that contains my image and name in the navigation bar */
+
+/* Contains my profile picture and name in the navigation bar */
+div#headerDiv {
+  height: 100%;
+
+  /* Centers the header contents vertically */
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* Image with my profile picture in the navigation bar */
+img#headerImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+
+  position: relative;
+}
+
+/* Big label in the navigation bar that has my name */
+h1#headerLabel {
+  display: inline;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20pt;
+
+  margin: 0 0 0 10px; /* Adds some spacing between image and name */
+
+  position: relative;
+}
+
+/* Link animations */
+a#headerLink {
+	text-decoration: none;
+	color: black;
+
+	-webkit-transition: color 0.2s;
+
+  margin: 0;
+  padding: 0;
+}
+a#headerLink img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.2s;
+}
+a#headerLink:hover {
+	color: #666666;
+	-webkit-transition: color 0.2s;
+}
+a#headerLink:hover img {
+	opacity: 0.8;
+	-webkit-transition: opacity 0.2s;
+}
+a#headerLink:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/* MARK: Regular navigation on the right of the navigation bar */
+
+div#regularNavigation {
+  /* Vertically-centers the navigation items */
+  display: inline-flex;
+  align-items: center;
+
+  /* Right-justifies the navigation */
+  margin-left: auto;
+}
+
+h6.regularNavigationLabel {
+  /* Side-by-side instead of on new lines */
+  display: inline;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12pt;
+
+  padding: 2px 5px 2px 5px; /* Spacing for highlight */
+	margin: 0px 0px 0px 15px; /* Spacing between labels */
+}
+
+/* Link animations */
+a.regularNavigationLink {
+	text-decoration: none;
+	color: black;
+	border-radius: 3px;
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.regularNavigationLink:hover h6 {
+	background-color: #DDDDDD;
+	color: #666666;
+	border-radius: 3px;
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.regularNavigationLink:active h6 {
+	background-color: #007AFF;
+	color: white;
+	border-radius: 3px;
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.regularNavigationLink:visited h6 {
+	color: black;
+	border-radius: 3px;
+}
+a.regularNavigationLinkCurrent h6 {
+	text-decoration: none;
+	color: white;
+	border-radius: 3px;
+
+	background-color: #007AFF;
+}
+
+/* MARK: Compact navigation that appears when the expand button is pressed */
+
+div#compactNavigationExpandButtonContainer {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+
+  /* Horizontally centers the button */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+input#compactNavigationDisplayButton {
+  height: 11px;
+}
+
+div#compactNavigationLabelsContainer {
+  /* Position above the drop down button */
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  right: 0px;
+
+  /* Lays out navigation labels vertically and horizontaly centered */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+h6.compactNavigationLabel {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12pt;
+
+  text-align: center;
+
+  border-radius: 5px;
+
+  padding: 10px 5px 10px 5px; /* Spacing for highlight */
+	margin: 1px 0px 0px 0px; /* Spacing between labels */
+}
+
+/* Link animations */
+a.compactNavigationLink {
+	text-decoration: none;
+	color: black;
+	/* border-radius: 3px; */
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.compactNavigationLink:hover h6 {
+	background-color: #DDDDDD;
+	color: #666666;
+	/* border-radius: 3px; */
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.compactNavigationLink:active h6 {
+	background-color: #007AFF;
+	color: white;
+	/* border-radius: 3px; */
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.compactNavigationLink:visited h6 {
+	color: black;
+	/* border-radius: 3px; */
+}
+a.compactNavigationLinkCurrent h6 {
+	text-decoration: none;
+	color: white;
+	/* border-radius: 3px; */
+
+	background-color: #007AFF;
+}
+
+/* MARK: Resizing the window */
+
+/* Attributes for compact width (mobile site) */
+@media only screen and (max-width: 650px) {
+  /* Adjust navigation bar container height to push content down appropriately */
+  div#navigationBarContainer {
+    height: calc(var(--compactNavBarHeight) + var(--compactCollapsedDropDownHeight))
+  }
+
+  div#navigationBarContent {
+    /* Shrink the nav bar */
+    height: var(--compactNavBarHeight);
+  }
+
+  img#headerImg {
+    /* Shrink the header image */
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+
+    /* Move the image down a bit */
+    top: 2px;
+  }
+
+  h1#headerLabel {
+    /* Shrink the header label */
+    font-size: 18pt;
+    /* Move the image down a bit */
+    top: 2px;
+  }
+
+  div#navigationDropDownMenu {
+    /* Show expansion indicator */
+    height: var(--compactCollapsedDropDownHeight);
+  }
+
+  div#regularNavigation {
+    /* Hide the regular navigation system when compact layout occurs */
+    display: none;
+  }
+}
+
+/* Attributes for beyond max main content width */
+/* Max content width + 2 * compactContentMargin (since left and right) */
+@media only screen and (max-width: 1220px) {
+  div.mainContent {
+    /* Add some extra margins to the edges */
+    margin: 0px var(--compactContentMargin);
+  }
+}

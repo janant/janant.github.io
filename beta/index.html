@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Anant Jain - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Gets jQuery from Google APIs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="Stylesheets/main.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="Scripts/main.js"></script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <div id='navigationBarContainer'>
+      <div id='navigationBar'>
+        <!-- The main top content of the navigation bar -->
+        <div class='mainContent' id='navigationBarContent'>
+          <!-- Header with my profile image and name -->
+          <a href='./' id='headerLink'>
+            <div id='headerDiv'>
+              <img src='Images/Profile Header Image.jpg' id='headerImg'/>
+              <h1 id='headerLabel'>ANANT JAIN</h1>
+            </div>
+          </a>
+
+          <!-- Regular navigation items on the right side of the navigation bar -->
+          <div id='regularNavigation'>
+            <a href='./' class='regularNavigationLink'><h6 class='regularNavigationLabel'>About Me</h6></a>
+            <a href='./' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Projects</h6></a>
+            <a href='./' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Photography</h6></a>
+            <a href='./' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Contact</h6></a>
+          </div>
+
+
+          <!-- <img src='c2.eps' height=28 /> -->
+        </div>
+        <!-- The bottom content of the navigation bar -->
+        <!-- Contains the compact navigation menu -->
+        <div class='mainContent' id='navigationDropDownMenu'>
+          <!-- Navigation items -->
+          <div id='compactNavigationLabelsContainer'>
+            <a href='./' class='compactNavigationLink'><h6 class='compactNavigationLabel'>About Me</h6></a>
+            <a href='./' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Projects</h6></a>
+            <a href='./' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Photography</h6></a>
+            <a href='./' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Contact</h6></a>
+          </div>
+          <!-- Show menu button -->
+          <div id='compactNavigationExpandButtonContainer'>
+            <form onsubmit='return false'>
+              <input type='image' id='compactNavigationDisplayButton' src='Images/chevron-down.svg' onclick='toggleCompactNavigationDisplay()'/>
+            </form>
+            <!-- <button type='button' id='compactNavigationExpandButton' onclick='toggleCompactNavigationDisplay()'>Show Menu</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src='http://www.maniacworld.com/now-this-is-a-tall-building.jpg' width="100%" height="auto" />
+  </body>
+</html>
