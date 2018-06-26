@@ -1,9 +1,51 @@
 /* MARK: Fonts */
 
 @font-face {
+	font-family: "Montserrat";
+	src: url("../Fonts/Montserrat-ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../Fonts/Montserrat-Light.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
   font-family: "Montserrat";
   src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Bold.ttf") format("truetype");
+  font-weight: 500;
 }
 
 /* MARK: CSS variables */
@@ -22,6 +64,9 @@
   /* The maximum width for content that stretches the width of the page */
   --maxContentWidth: 1200px;
   --compactContentMargin: 10px; /* Left/right margin when content is compact */
+
+  /* Variables to manage the footer */
+  --footerHeight: 135px;
 }
 
 /* MARK: General styles */
@@ -35,8 +80,18 @@ div.mainContent {
 }
 
 /* Remove the default margin on the body */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+	background-color: white;
+}
+
+/* Container with navigation bar, main content container, footer */
+/* Needed to make footer stick to bottom */
+div#overallContentContainer {
+  min-height: 100%;
+  position: relative;
 }
 
 /* MARK: Navigation bar styles */
@@ -76,6 +131,13 @@ div#navigationDropDownMenu {
   overflow: hidden;
 
   position: relative;
+}
+
+/* Main container with the content for each website. */
+/* Adds the padding for the footer automatically */
+div#mainContentContainer {
+  position: relative;
+  padding-bottom: var(--footerHeight);
 }
 
 /* MARK: Header that contains my image and name in the navigation bar */
@@ -274,6 +336,113 @@ a.compactNavigationLinkCurrent h6 {
 	background-color: #007AFF;
 }
 
+/* MARK: Footer */
+
+/* Container for the footer, needed to pin to the bottom of the screen */
+div#footerContainer {
+  /* Stick to bottom */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+
+  height: var(--footerHeight);
+
+  padding: 0;
+  margin: 0;
+}
+
+/* Contains all the content of the footer and lays out footer rows vertically */
+div#footerContent {
+  height: calc(100% - 10px);
+  background-color: black;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+div.footerRow {
+  margin: 6px auto;
+}
+
+div#footerLinksContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+a.footerLink {
+  margin: 0px 4px;
+}
+
+img.footerLinkImg {
+  display: inline;
+
+  height: 40px;
+  width: 40px;
+}
+
+div#footerCreditsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+p.footerCreditsText {
+  display: inline;
+
+  color: white;
+	font-size: 12pt;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+}
+
+img.footerCreditsIcon {
+  height: 17px;
+  width: auto;
+
+  display: inline;
+
+	position: relative;
+	top: 3px;
+}
+
+/* MARK: Section blocks */
+
+div.sectionBackground {
+	--section-border-radius: 15px;
+  border-radius: var(--section-border-radius);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.30);
+  overflow: hidden;
+  position: relative;
+  background-color: lightGray;
+
+	-webkit-backdrop-filter: blur(0px);
+}
+
+img.sectionBackgroundImage {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+div.sectionContent {
+	--sectionContent-padding: 15px;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	padding: var(--sectionContent-padding);
+}
+
+div.canFillWidth {
+
+}
+
 /* MARK: Resizing the window */
 
 /* Attributes for compact width (mobile site) */
@@ -314,6 +483,21 @@ a.compactNavigationLinkCurrent h6 {
     /* Hide the regular navigation system when compact layout occurs */
     display: none;
   }
+
+	div.canFillWidth {
+		/* max-width: none;
+		margin-left: 0px;
+		margin-right: 0px; */
+
+		box-shadow: initial;
+		border-radius: initial;
+
+		--compactContentMargin: 0xp
+	}
+
+	/* div#footerContent {
+		height: 100%;
+	} */
 }
 
 /* Attributes for beyond max main content width */

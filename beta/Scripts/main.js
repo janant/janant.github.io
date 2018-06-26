@@ -9,12 +9,12 @@ function toggleCompactNavigationDisplay() {
   // Gets appropriate height for the navigation bar
   if (isMenuVisible) {
     targetHeight = style.getPropertyValue('--compactCollapsedDropDownHeight').trim()
-    $('#compactNavigationDisplayButton').attr('src', 'Images/chevron-down.svg')
+    $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-down.svg')
     $('#compactNavigationExpandButtonContainer').css('bottom', '6px')
   }
   else {
     targetHeight = style.getPropertyValue('--compactExpandedDropDownHeight').trim()
-    $('#compactNavigationDisplayButton').attr('src', 'Images/chevron-up.svg')
+    $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-up.svg')
     $('#compactNavigationExpandButtonContainer').css('bottom', '8px')
   }
   isMenuVisible = !isMenuVisible
@@ -44,7 +44,7 @@ function setupForCompact() {
   $('#navigationDropDownMenu').css('height', 'var(--compactCollapsedDropDownHeight)')
 
   /* Shows appropriate image/positioning for navigation display button */
-  $('#compactNavigationDisplayButton').attr('src', 'Images/chevron-down.svg')
+  $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-down.svg')
   $('#compactNavigationExpandButtonContainer').css('bottom', '6px')
 }
 
@@ -76,4 +76,57 @@ $(document).ready(function() {
 			$("div#navigationBar").css({"box-shadow": "initial"});
 		}
 	});
+
+  // Sets up highlighting of buttons in the footer links
+
 })
+
+function highlightButton(button) {
+	var facebook = document.getElementById("facebook");
+	var twitter = document.getElementById("twitter");
+	var github = document.getElementById("github");
+	var linkedin = document.getElementById("linkedin");
+	var instagram = document.getElementById("instagram");
+
+	var allButtons = [facebook, twitter, github, linkedin, instagram];
+
+	for (var i = 0; i < allButtons.length; i++) {
+		if (button.id != allButtons[i].id) {
+			allButtons[i].style["opacity"] = "0.5";
+			allButtons[i].style["-webkit-transition"] = "opacity 0.3s";
+		}
+	}
+
+	button.style["opacity"] = "1.0";
+	button.style["-webkit-transition"] = "opacity 0.3s";
+}
+
+function unhighlightAllButtons() {
+	var facebook = document.getElementById("facebook");
+	var twitter = document.getElementById("twitter");
+	var github = document.getElementById("github");
+	var linkedin = document.getElementById("linkedin");
+	var instagram = document.getElementById("instagram");
+
+	var allButtons = [facebook, twitter, github, linkedin, instagram];
+
+	for (var i = 0; i < allButtons.length; i++) {
+		allButtons[i].style["opacity"] = "0.5";
+		allButtons[i].style["-webkit-transition"] = "opacity 0.3s";
+	}
+}
+
+function highlightAllButtons() {
+	var facebook = document.getElementById("facebook");
+	var twitter = document.getElementById("twitter");
+	var github = document.getElementById("github");
+	var linkedin = document.getElementById("linkedin");
+	var instagram = document.getElementById("instagram");
+
+	var allButtons = [facebook, twitter, github, linkedin, instagram];
+
+	for (var i = 0; i < allButtons.length; i++) {
+		allButtons[i].style["opacity"] = "1.0";
+		allButtons[i].style["-webkit-transition"] = "opacity 0.3s";
+	}
+}
