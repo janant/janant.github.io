@@ -9,12 +9,12 @@ function toggleCompactNavigationDisplay() {
   // Gets appropriate height for the navigation bar
   if (isMenuVisible) {
     targetHeight = style.getPropertyValue('--compactCollapsedDropDownHeight').trim()
-    $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-down.svg')
+    $('#compactNavigationDisplayButton').attr('src', '/beta/Images/Navigation Bar Images/chevron-down.svg')
     $('#compactNavigationExpandButtonContainer').css('bottom', '6px')
   }
   else {
     targetHeight = style.getPropertyValue('--compactExpandedDropDownHeight').trim()
-    $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-up.svg')
+    $('#compactNavigationDisplayButton').attr('src', '/beta/Images/Navigation Bar Images/chevron-up.svg')
     $('#compactNavigationExpandButtonContainer').css('bottom', '8px')
   }
   isMenuVisible = !isMenuVisible
@@ -44,7 +44,7 @@ function setupForCompact() {
   $('#navigationDropDownMenu').css('height', 'var(--compactCollapsedDropDownHeight)')
 
   /* Shows appropriate image/positioning for navigation display button */
-  $('#compactNavigationDisplayButton').attr('src', 'Images/Navigation Bar Images/chevron-down.svg')
+  $('#compactNavigationDisplayButton').attr('src', '/beta/Images/Navigation Bar Images/chevron-down.svg')
   $('#compactNavigationExpandButtonContainer').css('bottom', '6px')
 }
 
