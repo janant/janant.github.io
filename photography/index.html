@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Photography - Anant Jain</title>
+
+		<!-- Gets jQuery from Google APIs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+		</script>
+
+		<!-- Loads custom fonts for photography previews -->
+		<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+
+		<link type="text/css" rel="stylesheet" href="../Stylesheets/main.css">
+		<link type="text/css" rel="stylesheet" href="style.css">
+
+		<script type="text/javascript" src="../Scripts/main.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+
+	</head>
+	<body>
+		<div id="header">
+			<div id="headerContent">
+				<a href="../" id="navigationTitle">
+					<div id="headerTitle">
+						<img src="../Profile Header Image.jpg" id="titleProfile">
+						<h1 id="title">ANANT JAIN</h1>
+					</div>
+				</a>
+				<ul id="navigation">
+					<li id="navigation"><a id="navigationSubtitle" href="../about/">About Me</a></li>
+					<li id="navigation"><a id="navigationSubtitle" href="../projects/">Projects</a></li>
+					<li id="navigation"><a id="navigationSubtitleCurrent" href="./">Photography</a></li>
+					<li id="navigation"><a id="navigationSubtitle" href="../contact/">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="container">
+			<div id="headerDiv">
+			</div>
+
+			<div id="photographyContainer">
+				<div id="photographyContent">
+					<h1 id="photographyTitle">PHOTOGRAPHY</h1>
+<!--
+					<p class="photographyInfo">
+						Check out some of my best shots here.
+					</p>
+-->
+					<div class="categoryRow">
+						<div class="categoryLeft" style="background-image: url('Urban-Preview.jpg');">
+							<a href="urban/" class="categoryLink">
+								<div class="categoryHighlight">
+									<h2 class="categoryTitle">URBAN</h2>
+								</div>
+							</a>
+						</div>
+						<div class="categoryRight" style="background-image: url('Landscapes-Preview.jpg');">
+							<a href="landscapes/" class="categoryLink">
+								<div class="categoryHighlight">
+									<h2 class="categoryTitle">LANDSCAPES</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="categoryRow">
+						<div class="categoryLeft" style="background-image: url('Nature-Preview.jpg');">
+							<a href="nature/" class="categoryLink">
+								<div class="categoryHighlight">
+									<h2 class="categoryTitle">NATURE</h2>
+								</div>
+							</a>
+						</div>
+						<div class="categoryRight" style="background-image: url('Life-Preview.jpg');">
+							<a href="life/" class="categoryLink">
+								<div class="categoryHighlight">
+									<h2 class="categoryTitle">LIFE</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer">
+				<div id="otherLinks">
+					<div id="otherLinksContent">
+						<a href="https://www.facebook.com/anant.jain.5243" class="imgLink" target="_blank"><img src="../facebook.svg" class="otherLink" id="facebook" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
+						<a href="https://twitter.com/jainanant98" class="imgLink" target="_blank"><img src="../twitter.svg" class="otherLink" id="twitter" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
+						<a href="https://github.com/janant" class="imgLink" target="_blank"><img src="../github.svg" class="otherLink" id="github" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
+						<a href="https://www.linkedin.com/in/anantjain1" class="imgLink" target="_blank"><img src="../linkedin.svg" class="otherLink" id="linkedin" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
+						<a href="https://www.instagram.com/cuppaswift/" class="imgLink" target="_blank"><img src="../instagram.svg" class="otherLink" id="instagram" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
+					</div>
+				</div>
+				<div id="credits">
+					<p id="creditsText">
+		        <img class="creditsImg" src="../code.svg" /> with <img class="creditsImg" src="../heart.svg" /> by Anant Jain
+		      </p>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

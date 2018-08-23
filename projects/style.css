@@ -1,0 +1,259 @@
+div#projectsContainer {
+	padding-bottom: 160px;
+}
+
+div#projectsContent {
+	height: 100%;
+	width: 100%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1#projectsTitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	letter-spacing: 4px;
+	font-size: 30pt;
+
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+p.projectsInfo {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+hr.divider {
+	width: calc(100% - 20px);
+	max-width: 960px;
+	margin-top: 60px;
+	height: 1px;
+	border: none;
+	background-color: #8b8b8b;
+}
+
+h2.projectsGroupTitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	letter-spacing: 4px;
+	font-size: 25pt;
+
+	margin-left: 10px;
+	margin-right: 10px;
+
+	text-align: center;
+}
+
+div.project {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+
+	width: 100%;
+	max-width: 960px;
+
+	display: flex;
+	align-items: center;
+}
+
+img.projectScreenshot {
+	height: 600px;
+	width: auto;
+}
+img.projectScreenshotRight {
+	height: 600px;
+	width: auto;
+}
+
+div.projectInfo {
+	margin-left: 45px;
+	margin-right: 10px;
+}
+
+div.projectInfoLeft {
+	margin-left: 30px;
+	margin-right: 45px;
+}
+
+img.projectIcon {
+	height: 140px;
+	width: auto;
+}
+
+div.projectHeader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.projectHeaderText {
+	width: 100%;
+	margin-left: 25px;
+}
+
+h2.projectTitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 200;
+	text-align: left;
+
+	width: 100%;
+
+	letter-spacing: 3px;
+	font-size: 40pt;
+
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+h2.projectTitleLong {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 200;
+	text-align: left;
+
+	width: 100%;
+
+	letter-spacing: 3px;
+	font-size: 35pt;
+
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+h3.projectSubtitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	text-align: left;
+
+	width: 100%;
+
+	letter-spacing: 1px;
+	font-size: 18pt;
+
+	margin-top: 6px;
+	margin-bottom: 10px;
+
+	color: rgba(128, 128, 128, 1.0);
+}
+
+div.projectDetail {
+	width: 100%;
+}
+
+h4.projectNotability {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	text-align: left;
+
+	width: 100%;
+
+	letter-spacing: 1px;
+	font-size: 15pt;
+
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+p.projectDescription {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	text-align: left;
+
+	line-height: 1.4;
+
+	letter-spacing: 1px;
+	font-size: 12pt;
+
+	margin-top: 8px;
+}
+
+div.projectLinks {
+	margin-top: 25px;
+}
+div.githubLink {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+a.appStoreLink {
+	text-decoration: none;
+}
+a.appStoreLink img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+a.appStoreLink:hover img {
+	opacity: 0.7;
+	-webkit-transition: opacity 0.25s;
+}
+a.appStoreLink:visited img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+a.appStoreLink:active img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+
+a.ghLink {
+	text-decoration: none;
+}
+a.ghLink img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+a.ghLink:hover img {
+	opacity: 0.7;
+	-webkit-transition: opacity 0.25s;
+}
+a.ghLink:visited img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+a.ghLink:active img {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.25s;
+}
+
+@media (max-width: 970px) {
+
+	h1#projectsTitle {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	p.projectsInfo {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	hr.divider {
+		width: calc(100% - 40px);
+	}
+
+	img.projectIcon {
+		height: 120px;
+		width: auto;
+	}
+
+	h2.projectTitle {
+		font-size: 35px;
+	}
+	h2.projectTitleLong {
+		font-size: 35px;
+	}
+
+	div.projectInfo {
+		margin-left: 0px;
+	}
+
+	div.projectInfoLeft {
+		margin-right: 0px;
+	}
+}
