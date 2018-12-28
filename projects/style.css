@@ -170,7 +170,7 @@ div.projectLinks a:not(:first-child) {
 /* MARK: Resizing the window */
 
 /* Make some components smaller below certain levels */
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 920px) {
   img.projectImage {
     height: 500px;
   }
@@ -200,32 +200,11 @@ div.projectLinks a:not(:first-child) {
   }
 }
 
-/* Attributes for compact width (mobile site) */
-@media only screen and (max-width: 650px) {
-  img.projectImage {
-    flex-basis: 100%;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-  }
-
-  div.leftProjectImage div.projectPreview {
-    margin-left: 5px;
-  }
-
-  div.rightProjectImage div.projectPreview {
-    margin-right: 5px;
-  }
-
+@media only screen and (max-width: 700px) {
   img.projectIcon {
   	height: 90px;
   }
-
-  div.projectPreview {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
-
+  
   h4.projectSubtitle {
   	font-size: 13pt;
   }
@@ -244,5 +223,28 @@ div.projectLinks a:not(:first-child) {
 
   p.projectText {
   	font-size: 11pt;
+  }
+}
+
+/* Attributes for compact width (mobile site) */
+@media only screen and (max-width: 650px) {
+  img.projectImage {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  div.leftProjectImage div.projectPreview {
+    margin-left: 5px;
+  }
+
+  div.rightProjectImage div.projectPreview {
+    margin-right: 5px;
+  }
+
+  div.projectPreview {
+    flex-basis: 100%;
+    margin-bottom: 20px;
   }
 }
