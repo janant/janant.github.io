@@ -1,129 +1,186 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<title>Landscape Photography - Anant Jain</title>
+<html>
+  <head>
+    <title>Anant Jain | Landscape Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="../../">
 
-		<!-- Gets jQuery from Google APIs -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-		</script>
+    <!-- Gets jQuery from Google APIs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- Loads custom fonts for photography previews -->
+    <!-- Loads custom fonts for photography previews -->
 		<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 
-		<link type="text/css" rel="stylesheet" href="../../Stylesheets/main.css">
-		<link type="text/css" rel="stylesheet" href="../../Stylesheets/photography_category_main.css">
-		<link type="text/css" rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="Stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="Stylesheets/photography_main.css">
+    <link type="text/css" rel="stylesheet" href="photography/landscapes/style.css">
 
-		<script type="text/javascript" src="../../Scripts/main.js"></script>
-		<script type="text/javascript" src="../../Scripts/photography_category_main.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="Scripts/main.js"></script>
+    <script type="text/javascript" src="Scripts/photography_main.js"></script>
+    <script type="text/javascript" src="photography/landscapes/script.js"></script>
+  </head>
+  <body>
+    <!-- Overall content container with nav bar, main content, footer -->
+    <div id='overallContentContainer'>
+      <!-- Navigation bar -->
+      <div id='navigationBarContainer'>
+        <div id='navigationBar'>
+          <!-- The main top content of the navigation bar -->
+          <div class='mainContent' id='navigationBarContent'>
+            <!-- Header with my profile image and name -->
+            <a href='./' id='headerLink'>
+              <div id='headerDiv'>
+                <img src='Images/Navigation Bar Images/Profile Header Image.jpg' id='headerImg'/>
+                <h1 id='headerLabel'>ANANT JAIN</h1>
+              </div>
+            </a>
 
-	</head>
-	<body>
-		<div id="header">
-			<div id="headerContent">
-				<a href="../../" id="navigationTitle">
-					<div id="headerTitle">
-						<img src="../../Profile Header Image.jpg" id="titleProfile">
-						<h1 id="title">ANANT JAIN</h1>
-					</div>
-				</a>
-				<ul id="navigation">
-					<li id="navigation"><a id="navigationSubtitle" href="../../about/">About Me</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="../../projects/">Projects</a></li>
-					<li id="navigation"><a id="navigationSubtitleCurrent" href="../">Photography</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="../../contact/">Contact</a></li>
-				</ul>
-			</div>
-		</div>
+            <!-- Regular navigation items on the right side of the navigation bar -->
+            <div id='regularNavigation'>
+              <a href='about/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='regularNavigationLinkCurrent'><h6 class='regularNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Contact</h6></a>
+            </div>
+          </div>
+          <!-- The bottom content of the navigation bar -->
+          <!-- Contains the compact navigation menu -->
+          <div class='mainContent' id='navigationDropDownMenu'>
+            <!-- Navigation items -->
+            <div id='compactNavigationLabelsContainer'>
+              <a href='about/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='compactNavigationLinkCurrent'><h6 class='compactNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Contact</h6></a>
+            </div>
+            <!-- Show menu button -->
+            <div id='compactNavigationExpandButtonContainer'>
+              <form onsubmit='return false'>
+                <input type='image' id='compactNavigationDisplayButton' src='Images/Navigation Bar Images/chevron-down.svg' onclick='toggleCompactNavigationDisplay()'/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<div id="container">
-			<div id="headerDiv">
-			</div>
+      <!-- Main content -->
+      <div id='mainContentContainer'>
 
-			<div id="photosContainer">
-				<div id="photosContent">
-					<h1 class="sectionTitle">LANDSCAPES</h1>
-						<div class="photoBlock">
-							<img src="landscapes-1.jpg" class="photo">
-							<div class="photoInfo">
-								<img class="locationIcon" src="location_icon.svg">
-								<p class="locationText">Monterey, CA</p>
-							</div>
-						</div>
-						<div class="photoBlock">
-							<img src="landscapes-2.jpg" class="photo">
-							<div class="photoInfo">
-								<img class="locationIcon" src="location_icon.svg">
-								<p class="locationText">Monterey, CA</p>
-							</div>
-						</div>
-						<div class="photoBlock">
-							<img src="landscapes-3.jpg" class="photo">
-							<div class="photoInfo">
-								<img class="locationIcon" src="location_icon.svg">
-								<p class="locationText">Big Beach, Maui, HI</p>
-							</div>
-						</div>
-						<div class="photoBlock">
-							<img src="landscapes-4.jpg" class="photo">
-							<div class="photoInfo">
-								<img class="locationIcon" src="location_icon.svg">
-								<p class="locationText">Wailea, Maui, HI</p>
-							</div>
-						</div>
-						<div class="photoBlock">
-							<img src="landscapes-5.jpg" class="photo">
-							<div class="photoInfo">
-								<img class="locationIcon" src="location_icon.svg">
-								<p class="locationText">Monterey, CA</p>
-							</div>
-						</div>
+        <div class='mainContent'>
+          <!-- Landscapes title -->
+          <h1 class='photographySubtitle'>LANDSCAPES</h1>
 
-					<h1 class="sectionTitle" style="margin-bottom: 10px;">MORE</h1>
-					<div class="otherCategories">
-						<div class="category" id="leftMostCategory" style="background-image: url('../Urban-Preview.jpg');">
-							<a href="../urban/" class="categoryLink">
-								<div class="categoryHighlight">
-									<h2 class="categoryTitle">URBAN</h2>
-								</div>
-							</a>
-						</div>
-						<div class="category" style="background-image: url('../Nature-Preview.jpg');">
-							<a href="../nature/" class="categoryLink">
-								<div class="categoryHighlight">
-									<h2 class="categoryTitle">NATURE</h2>
-								</div>
-							</a>
-						</div>
-						<div class="category" id="rightMostCategory" style="background-image: url('../Life-Preview.jpg');">
-							<a href="../life/" class="categoryLink">
-								<div class="categoryHighlight">
-									<h2 class="categoryTitle">LIFE</h2>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+          <!-- Start of photos container -->
+          <div id='photosContainer'>
 
-			<div id="footer">
-				<div id="otherLinks">
-					<div id="otherLinksContent">
-						<a href="https://www.facebook.com/anant.jain.5243" class="imgLink" target="_blank"><img src="../../facebook.svg" class="otherLink" id="facebook" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://twitter.com/jainanant98" class="imgLink" target="_blank"><img src="../../twitter.svg" class="otherLink" id="twitter" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://github.com/janant" class="imgLink" target="_blank"><img src="../../github.svg" class="otherLink" id="github" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.linkedin.com/in/anantjain1" class="imgLink" target="_blank"><img src="../../linkedin.svg" class="otherLink" id="linkedin" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.instagram.com/cuppaswift/" class="imgLink" target="_blank"><img src="../../instagram.svg" class="otherLink" id="instagram" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-					</div>
-				</div>
-				<div id="credits">
-					<p id="creditsText">
-		        <img class="creditsImg" src="../../code.svg" /> with <img class="creditsImg" src="../../heart.svg" /> by Anant Jain
-		      </p>
-				</div>
-			</div>
+            <div class='photoContainer'>
+              <img src='photography/Images/Landscapes/landscapes-1.jpg' class='photoImg landscapePhoto' />
+              <div class='photoInfoContainer'>
+                <img src='photography/Images/location_icon.svg' class='locationIcon' />
+                <p class='locationText'>Monterey, CA</p>
+              </div>
+            </div>
 
-		</div>
-	</body>
+            <div class='photoContainer'>
+              <img src='photography/Images/Landscapes/landscapes-2.jpg' class='photoImg landscapePhoto' />
+              <div class='photoInfoContainer'>
+                <img src='photography/Images/location_icon.svg' class='locationIcon' />
+                <p class='locationText'>Monterey, CA</p>
+              </div>
+            </div>
+
+            <div class='photoContainer'>
+              <img src='photography/Images/Landscapes/landscapes-3.jpg' class='photoImg landscapePhoto' />
+              <div class='photoInfoContainer'>
+                <img src='photography/Images/location_icon.svg' class='locationIcon' />
+                <p class='locationText'>Big Beach, Maui, HI</p>
+              </div>
+            </div>
+
+            <div class='photoContainer'>
+              <img src='photography/Images/Landscapes/landscapes-4.jpg' class='photoImg landscapePhoto' />
+              <div class='photoInfoContainer'>
+                <img src='photography/Images/location_icon.svg' class='locationIcon' />
+                <p class='locationText'>Wailea, Maui, HI</p>
+              </div>
+            </div>
+
+            <div class='photoContainer'>
+              <img src='photography/Images/Landscapes/landscapes-5.jpg' class='photoImg landscapePhoto' />
+              <div class='photoInfoContainer'>
+                <img src='photography/Images/location_icon.svg' class='locationIcon' />
+                <p class='locationText'>Monterey, CA</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- More categories -->
+          <h1 class='photographySubtitle'>MORE</h1>
+          <div id='moreCategoriesContainer'>
+            <!-- Urban category -->
+            <div class='card'>
+              <a href='photography/urban/' class='photographyCategoryLink'>
+                <div class='photographyCategory'>
+                  <img src='photography/Preview-Images/urban-preview.jpg' class='photographyCategoryPreviewImg' />
+                  <div class='photographyCategoryContent'>
+                    <div class='photographyCategoryHighlight'></div>
+                    <h2 class='photographyCategoryTitle'>URBAN</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Nature category -->
+            <div class='card'>
+              <a href='photography/nature/' class='photographyCategoryLink'>
+                <div class='photographyCategory'>
+                  <img src='photography/Preview-Images/nature-preview.jpg' class='photographyCategoryPreviewImg' />
+                  <div class='photographyCategoryContent'>
+                    <div class='photographyCategoryHighlight'></div>
+                    <h2 class='photographyCategoryTitle'>NATURE</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Life category -->
+            <div class='card'>
+              <a href='photography/life/' class='photographyCategoryLink'>
+                <div class='photographyCategory'>
+                  <img src='photography/Preview-Images/life-preview.jpg' class='photographyCategoryPreviewImg' />
+                  <div class='photographyCategoryContent'>
+                    <div class='photographyCategoryHighlight'></div>
+                    <h2 class='photographyCategoryTitle'>LIFE</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id='footerContainer'>
+        <div id='footerContent' class='card mainContent'>
+          <!-- Links to my profiles on other websites/services -->
+          <div class='footerRow footerLinksContainer'>
+            <a class='footerLink' href='https://www.facebook.com/anant.jain.5243' target='_blank'><img class='footerLinkImg' id='facebook' src='Images/Footer Images/facebook.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://twitter.com/jainanant98' target='_blank'><img class='footerLinkImg' id='twitter' src='Images/Footer Images/twitter.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://github.com/janant' target='_blank'><img class='footerLinkImg' id='github' src='Images/Footer Images/github.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.linkedin.com/in/anantjain1' target='_blank'><img class='footerLinkImg' id='linkedin' src='Images/Footer Images/linkedin.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.instagram.com/cuppaswift/' target='_blank'><img class='footerLinkImg' id='instagram' src='Images/Footer Images/instagram.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+          </div>
+          <!-- Credits at the bottom of the screen -->
+          <!-- "Coded with love by Anant Jain" -->
+          <div class='footerRow footerCreditsContainer'>
+            <img class="footerCreditsIcon" src="Images/Footer Images/code.svg" />
+            <p class='footerCreditsText'>with</p>
+            <img class="footerCreditsIcon" src="Images/Footer Images/heart.svg" />
+            <p class='footerCreditsText'>by Anant Jain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

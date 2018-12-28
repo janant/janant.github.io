@@ -1,0 +1,191 @@
+h1.photographySubtitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 200;
+
+	letter-spacing: 3px;
+	font-size: 23pt;
+	color: #222222;
+	text-align: left;
+
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+div#photographyCategoriesContainer {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 100%;
+}
+
+div#photographyCategoriesContainer div.card {
+  flex: 1 1 40%;
+  margin-bottom: 20px;
+}
+
+div#photographyCategoriesContainer div.card:nth-child(2n) {
+  margin-left: 20px;
+}
+
+div#moreCategoriesContainer {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 100%;
+}
+
+div#moreCategoriesContainer div.card {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+}
+
+div#moreCategoriesContainer div.card:not(:nth-child(3n + 1)) {
+  margin-left: 20px;
+}
+
+img.photographyCategoryPreviewImg {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  z-index: 1;
+}
+
+div.photographyCategoryContent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.photographyCategoryHighlight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(221, 221, 221, 0.6);
+  z-index: 2;
+}
+
+a.photographyCategoryLink div.photographyCategoryHighlight {
+  opacity: 0.0;
+  -webkit-animation: opacity 0.15s;
+}
+a.photographyCategoryLink:visited div.photographyCategoryHighlight {
+  opacity: 0.0;
+  -webkit-animation: opacity 0.15s;
+}
+a.photographyCategoryLink:hover div.photographyCategoryHighlight {
+  opacity: 0.3;
+  -webkit-animation: opacity 0.15s;
+}
+a.photographyCategoryLink:active div.photographyCategoryHighlight {
+  opacity: 0.6;
+  -webkit-animation: opacity 0.15s;
+}
+
+h2.photographyCategoryTitle {
+  color: white;
+
+	font-family: 'Teko', sans-serif;
+	font-size: 42pt;
+	letter-spacing: 2px;
+
+	text-shadow: 0px 1px 20px black;
+
+  z-index: 3;
+}
+
+div#photosContainer {
+	width: 100%;
+}
+
+div#photosContainer div.photoContainer {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+img.photoImg {
+	height: auto;
+	min-width: 0px;
+	min-height: 0px;
+}
+
+img.landscapePhoto {
+	width: 100%;
+}
+
+img.portraitPhoto {
+	width: 75%;
+}
+
+div.photoInfoContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	margin-top: 15px;
+}
+
+img.locationIcon {
+	height: 20px;
+	width: auto;
+}
+
+p.locationText {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 13pt;
+
+	margin: 0px 0px 0px 10px;
+
+	color: #888888;
+}
+
+@media only screen and (max-width: 900px) {
+	h2.photographyCategoryTitle {
+	  font-size: 30pt;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	h1.photographySubtitle {
+		 margin-top: 0px;
+	}
+
+	img.locationIcon {
+		height: 17px;
+	}
+
+	p.locationText {
+		font-size: 12pt;
+	}
+
+  div#photographyCategoriesContainer div.card {
+    flex-basis: 100%;
+  }
+
+  div#photographyCategoriesContainer div.card:nth-child(2n) {
+    margin-left: 0px;
+  }
+
+	div#moreCategoriesContainer div.card {
+	  flex-basis: 100%;
+	}
+
+	div#moreCategoriesContainer div.card:not(:nth-child(3n + 1)) {
+	  margin-left: 0px;
+	}
+}

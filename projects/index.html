@@ -1,217 +1,278 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<title>Projects - Anant Jain</title>
+<html>
+  <head>
+    <title>Anant Jain | Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="../">
 
-		<!-- Gets jQuery from Google APIs -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-		</script>
+    <!-- Gets jQuery from Google APIs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<link type="text/css" rel="stylesheet" href="../Stylesheets/main.css">
-		<link type="text/css" rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="Stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="projects/style.css">
 
-		<script type="text/javascript" src="../Scripts/main.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="Scripts/main.js"></script>
+    <script type="text/javascript" src="projects/script.js"></script>
+  </head>
+  <body>
+    <!-- Overall content container with nav bar, main content, footer -->
+    <div id='overallContentContainer'>
+      <!-- Navigation bar -->
+      <div id='navigationBarContainer'>
+        <div id='navigationBar'>
+          <!-- The main top content of the navigation bar -->
+          <div class='mainContent' id='navigationBarContent'>
+            <!-- Header with my profile image and name -->
+            <a href='./' id='headerLink'>
+              <div id='headerDiv'>
+                <img src='Images/Navigation Bar Images/Profile Header Image.jpg' id='headerImg'/>
+                <h1 id='headerLabel'>ANANT JAIN</h1>
+              </div>
+            </a>
 
-	</head>
-	<body>
-		<div id="header">
-			<div id="headerContent">
-				<a href="../" id="navigationTitle">
-					<div id="headerTitle">
-						<img src="../Profile Header Image.jpg" id="titleProfile">
-						<h1 id="title">ANANT JAIN</h1>
-					</div>
-				</a>
-				<ul id="navigation">
-					<li id="navigation"><a id="navigationSubtitle" href="../about/">About Me</a></li>
-					<li id="navigation"><a id="navigationSubtitleCurrent" href="./">Projects</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="../photography/">Photography</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="../contact/">Contact</a></li>
-				</ul>
-			</div>
-		</div>
+            <!-- Regular navigation items on the right side of the navigation bar -->
+            <div id='regularNavigation'>
+              <a href='about/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='regularNavigationLinkCurrent'><h6 class='regularNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Contact</h6></a>
+            </div>
+          </div>
+          <!-- The bottom content of the navigation bar -->
+          <!-- Contains the compact navigation menu -->
+          <div class='mainContent' id='navigationDropDownMenu'>
+            <!-- Navigation items -->
+            <div id='compactNavigationLabelsContainer'>
+              <a href='about/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='compactNavigationLinkCurrent'><h6 class='compactNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Contact</h6></a>
+            </div>
+            <!-- Show menu button -->
+            <div id='compactNavigationExpandButtonContainer'>
+              <form onsubmit='return false'>
+                <input type='image' id='compactNavigationDisplayButton' src='Images/Navigation Bar Images/chevron-down.svg' onclick='toggleCompactNavigationDisplay()'/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<div id="container">
-			<div id="headerDiv">
-			</div>
+      <!-- Main content -->
+      <div id='mainContentContainer'>
+        <div class='mainContent'>
 
-			<div id="projectsContainer">
-				<div id="projectsContent">
-					<h1 id="projectsTitle">PROJECTS</h1>
-					<p class="projectsInfo">
-						Check out some of my creations here, many of which are available on the App Store and open sourced on GitHub.
-					</p>
+          <!-- Projects header -->
+          <h1 class='pageTitle'>PROJECTS</h1>
+          <p class='pageText'>Check out some of my creations here, many of which are available on the App Store and open sourced on GitHub.</p>
 
-					<hr class="divider">
+          <!-- Header for completed projects -->
+          <hr class="sectionDivider projectsDivider"/>
+          <h2 class='pageSubtitle'>COMPLETED PROJECTS</h2>
 
-					<h2 class="projectsGroupTitle">COMPLETED PROJECTS</h2>
+          <!-- Completed projects -->
+          <div class='projectsContainer'>
 
-					<!-- Ignus Project -->
-					<div class="project">
-						<img src="Ignus-Screenshot.jpg" class="projectScreenshot">
-						<div class="projectInfo">
-							<div class="projectHeader">
-								<img src="Ignus-Icon.png" class="projectIcon">
-								<div class="projectHeaderText">
-					<h2 class="projectTitle" style="color: rgba(234, 51, 56, 1.0);">IGNUS</h2>
-										<h3 class="projectSubtitle">A fiery new way to manage money.</h3>
-								</div>
-							</div>
-							<div class="projectDetail">
-								<h4 class="projectNotability" style="color: rgba(234, 51, 56, 1.0);">Best iOS App at HS Hacks II!</h4>
-								<p class="projectDescription">Ignus combines the power of an expense and debt management application with the fun of a social network. Connect with your friends and request payments from each other, and quickly rate each other for each payment. Your ratings are totaled up on your profile; build up lots of good ratings to prove your trustworthiness!</p>
-							</div>
-							<div class="projectLinks">
-								<a href="https://itunes.apple.com/us/app/ignus/id1034639126?mt=8" target="_blank" class="appStoreLink">
-									<img src="DownloadAppStoreBadge.svg">
-								</a>
-								<a href="https://github.com/janant/Ignus" target="_blank" class="ghLink">
-									<div class="githubLink">
-										<img src="GH_Icon.svg" style="height: 40px; width: auto;">
-										<img src="GitHub_Logo.svg" style="height: 34px; width: auto; margin-left: 3px;">
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+            <!-- Ignus -->
+            <div class='project leftProjectImage'>
+              <img src='projects/Images/Ignus/Preview.png' class='projectImage' />
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/Ignus/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName ignusColor'>IGNUS</h3>
+                    <h4 class='projectSubtitle'>A fiery new way to manage money.</h4>
+                  </div>
+                </div>
+                <h5 class='projectPromotion ignusColor'>Best iOS App at HS Hacks II!</h5>
+                <p class='projectText'>
+                  Ignus combines the power of an expense and debt management
+                  application with the fun of a social network. Connect with your friends and request
+                  payments from each other, and quickly rate each other for each payment. Your ratings
+                  are totaled up on your profile; build up lots of good ratings to prove your trustworthiness!
+                </p>
+                <div class='projectLinks'>
+                  <a href='https://itunes.apple.com/us/app/ignus/id1034639126?mt=8' class='appStoreLink'>
+                    <img src='projects/Images/DownloadOnAppStore.svg' />
+                  </a>
+                  <a href='https://github.com/janant/Ignus-Firebase' class='githubLink'>
+                    <img src='projects/Images/CheckOutOnGithub.svg' />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-					<!-- ChemWhiz Project -->
-					<div class="project">
-						<div class="projectInfoLeft">
-							<div class="projectHeader">
-								<img src="ChemWhiz-Icon.png" class="projectIcon">
-								<div class="projectHeaderText">
-					<h2 class="projectTitle" style="color: rgba(26, 198, 178, 1);">CHEMWHIZ</h2>
-										<h3 class="projectSubtitle">End the menial calculations in your chemistry class.</h3>
-								</div>
-							</div>
-							<div class="projectDetail">
-								<h4 class="projectNotability" style="color: rgba(26, 198, 178, 1);">Best iOS App/3rd Place Overall at HS Hacks!</h4>
-								<p class="projectDescription">Tired of wasting your time doing boring calculations during chemistry labs? Then ChemWhiz is the app for you. Quickly find the molar mass of any chemical simply by typing its formula. Convert between common units like moles, liters, and grams. And view at-a-glance information about every element in the periodic table.</p>
-							</div>
-							<div class="projectLinks">
-								<a href="https://itunes.apple.com/us/app/chemwhiz/id839352831?mt=8" target="_blank" class="appStoreLink">
-									<img src="DownloadAppStoreBadge.svg">
-								</a>
-								<a href="https://github.com/janant/ChemWhiz" target="_blank" class="ghLink">
-									<div class="githubLink">
-										<img src="GH_Icon.svg" style="height: 40px; width: auto;">
-										<img src="GitHub_Logo.svg" style="height: 34px; width: auto; margin-left: 3px;">
-									</div>
-								</a>
-							</div>
-						</div>
-						<img src="ChemWhiz-Screenshot.jpg" class="projectScreenshotRight">
-					</div>
+            <!-- ChemWhiz -->
+            <div class='project rightProjectImage'>
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/ChemWhiz/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName chemwhizColor'>CHEMWHIZ</h3>
+                    <h4 class='projectSubtitle'>End the menial calculations in your chemistry class.</h4>
+                  </div>
+                </div>
+                <h5 class='projectPromotion chemwhizColor'>Best iOS App/3rd Place Overall at HS Hacks!</h5>
+                <p class='projectText'>
+                  Tired of wasting your time doing boring calculations during chemistry labs? Then ChemWhiz
+                  is the app for you. Quickly find the molar mass of any chemical simply by typing its formula.
+                  Convert between common units like moles, liters, and grams. And view at-a-glance information
+                  about every element in the periodic table.
+                </p>
+                <div class='projectLinks'>
+                  <a href='https://itunes.apple.com/us/app/chemwhiz/id839352831?mt=8' class='appStoreLink'>
+                    <img src='projects/Images/DownloadOnAppStore.svg' />
+                  </a>
+                  <a href='https://github.com/janant/ChemWhiz' class='githubLink'>
+                    <img src='projects/Images/CheckOutOnGithub.svg' />
+                  </a>
+                </div>
+              </div>
+              <img src='projects/Images/ChemWhiz/Preview.png' class='projectImage' />
+            </div>
 
-					<!-- Community Balance Project -->
-					<div class="project">
-						<img src="CB-Screenshot.jpg" class="projectScreenshot">
-						<div class="projectInfo">
-							<div class="projectHeader">
-								<img src="CB-Icon.png" class="projectIcon">
-								<div class="projectHeaderText">
-					<h2 class="projectTitleLong" style="color: rgba(255, 128, 0, 1.0);">COMMUNITY BALANCE</h2>
-										<h3 class="projectSubtitle">The official app of the TV show.</h3>
-								</div>
-							</div>
-							<div class="projectDetail">
-								<p class="projectDescription">The Official Community Balance App allows you to watch all of your favorite Community Balance episodes and view the Community Balance website on your iPhone, iPad, and iPod touch. Visit an enhanced version of the Community Balance website, watch any episode of the show instantly, and take a look behind the scenes of Community Balance.</p>
-							</div>
-							<div class="projectLinks">
-								<a href="https://itunes.apple.com/us/app/community-balance/id725772123?mt=8" target="_blank" class="appStoreLink">
-									<img src="DownloadAppStoreBadge.svg">
-								</a>
-								<a href="https://github.com/janant/Community-Balance" target="_blank" class="ghLink">
-									<div class="githubLink">
-										<img src="GH_Icon.svg" style="height: 40px; width: auto;">
-										<img src="GitHub_Logo.svg" style="height: 34px; width: auto; margin-left: 3px;">
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+            <!-- Community Balance -->
+            <div class='project leftProjectImage'>
+              <img src='projects/Images/CommunityBalance/Preview.png' class='projectImage' />
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/CommunityBalance/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName communityBalanceColor'>COMMUNITY BALANCE</h3>
+                    <h4 class='projectSubtitle'>The official app of the TV show.</h4>
+                  </div>
+                </div>
+                <p class='projectText'>
+                  The Official Community Balance App allows you to watch all of your favorite Community Balance
+                  episodes and view the Community Balance website on your iPhone, iPad, and iPod touch. Visit an
+                  enhanced version of the Community Balance website, watch any episode of the show instantly,
+                  and take a look behind the scenes of Community Balance.
+                </p>
+                <div class='projectLinks'>
+                  <a href='https://itunes.apple.com/us/app/community-balance/id725772123?mt=8' class='appStoreLink'>
+                    <img src='projects/Images/DownloadOnAppStore.svg' />
+                  </a>
+                  <a href='https://github.com/janant/Community-Balance' class='githubLink'>
+                    <img src='projects/Images/CheckOutOnGithub.svg' />
+                  </a>
+                </div>
+              </div>
+            </div>
 
-					<!-- RPS Project -->
-					<div class="project">
-						<div class="projectInfoLeft">
-							<div class="projectHeader">
-								<img src="RPS-Icon.png" class="projectIcon">
-								<div class="projectHeaderText">
-					<h2 class="projectTitleLong" style="color: rgba(78, 221, 243, 1.0);">ROCK PAPER SCISSORS MOBILE</h2>
-										<h3 class="projectSubtitle">The simplest Rock Paper Scissors game available on the App Store.</h3>
-								</div>
-							</div>
-							<div class="projectDetail">
-								<h4 class="projectNotability" style="color: rgba(78, 221, 243, 1.0);">Over 15,000 downloads!</h4>
-								<p class="projectDescription">My first app! Includes iAds.<br>Clean and simple Rock, Paper, Scissors! action for iPhone. Just pick the right weapon, and you're a winner. Features an easy to use interface and three difficulty levels.</p>
-							</div>
-							<div class="projectLinks">
-								<a href="https://itunes.apple.com/us/app/rock-paper-scissors-for-iphone/id619530332?mt=8" target="_blank" class="appStoreLink">
-									<img src="DownloadAppStoreBadge.svg">
-								</a>
-								<a href="https://github.com/janant/Rock-Paper-Scissors-for-iPhone" target="_blank" class="ghLink">
-									<div class="githubLink">
-										<img src="GH_Icon.svg" style="height: 40px; width: auto;">
-										<img src="GitHub_Logo.svg" style="height: 34px; width: auto; margin-left: 3px;">
-									</div>
-								</a>
-							</div>
-						</div>
-						<img src="RPS-Screenshot.jpg" class="projectScreenshotRight">
-					</div>
+            <!-- Rock Paper Scissors Mobile -->
+            <div class='project rightProjectImage'>
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/RPS/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName longName rpsColor'>ROCK PAPER SCISSORS MOBILE</h3>
+                    <h4 class='projectSubtitle'>The simplest Rock Paper Scissors game on the App Store.</h4>
+                  </div>
+                </div>
+                <h5 class='projectPromotion rpsColor'>Over 15,000 downloads!</h5>
+                <p class='projectText'>
+                  My first app! Includes iAds.<br />
+                  Clean and simple Rock, Paper, Scissors! action for iPhone. Just pick the right weapon,
+                  and you're a winner. Features an easy to use interface and three difficulty levels.
+                </p>
+                <div class='projectLinks'>
+                  <a href='https://itunes.apple.com/us/app/rock-paper-scissors-for-iphone/id619530332?mt=8' class='appStoreLink'>
+                    <img src='projects/Images/DownloadOnAppStore.svg' />
+                  </a>
+                  <a href='https://github.com/janant/Rock-Paper-Scissors-for-iPhone' class='githubLink'>
+                    <img src='projects/Images/CheckOutOnGithub.svg' />
+                  </a>
+                </div>
+              </div>
+              <img src='projects/Images/RPS/Preview.png' class='projectImage' />
+            </div>
 
-					<hr class="divider">
+          </div>
 
-					<h2 class="projectsGroupTitle">OTHER PROJECTS</h2>
+          <!-- Header for other projects -->
+          <hr class="sectionDivider projectsDivider"/>
+          <h2 class='pageSubtitle'>OTHER PROJECTS</h2>
 
-					<!-- WWDC 2015 Project -->
-					<div class="project">
-						<img src="AJ-Screenshot.jpg" class="projectScreenshot">
-						<div class="projectInfo">
-							<div class="projectHeader">
-								<img src="AJ-Icon.png" class="projectIcon">
-								<div class="projectHeaderText">
-					<h2 class="projectTitle" style="color: rgba(182, 115, 66, 1.0);">ANANT JAIN</h2>
-										<h3 class="projectSubtitle">(WWDC 2015 Scholarship app)</h3>
-								</div>
-							</div>
-							<div class="projectDetail">
-								<h4 class="projectNotability" style="color: rgba(182, 115, 66, 1.0);">WINNER - Apple WWDC 2015 Scholarship Award</h4>
-								<p class="projectDescription">Inspired by my favorite childhood toy, my WWDC 2015 app operates like a wooden labyrinth. Simply tilt the device to roll the steel ball around and navigate through the app, all while learning about me and my background. Apple, Inc. recognized my submission as a perfect blend of the arts and sciences, granting me a free ticket to attend WWDC 2015 and recognizing me as one of the top 350 student developers across the globe.</p>
-							</div>
-							<div class="projectLinks">
-								<a href="https://github.com/janant/WWDC-2015" target="_blank" class="ghLink">
-									<div class="githubLink" style="margin-left: 0px;">
-										<img src="GH_Icon.svg" style="height: 40px; width: auto;">
-										<img src="GitHub_Logo.svg" style="height: 34px; width: auto; margin-left: 3px;">
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+          <!-- Other projects -->
+          <div class='projectsContainer'>
 
-				</div>
-			</div>
+            <!-- sixty six -->
+            <div class='project leftProjectImage'>
+              <img src='projects/Images/sixtysix/Preview.png' class='projectImage' />
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/sixtysix/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName sixtySixColor'>SIXTY SIX</h3>
+                    <h4 class='projectSubtitle'>An innovative new habit tracker.</h4>
+                  </div>
+                </div>
+                <h5 class='projectPromotion sixtySixColor'>Best Demo at USC LavaLab Demo Night!</h5>
+                <p class='projectText'>
+                  sixty six is an innovative new app designed to help you build new habits. Unlike other
+                  habit-tracking apps, sixty six allows you to both track and mark your habits as completed
+                  exclusively through notifications, preventing you from giving up on your goals. sixty six
+                  also includes social habits, increasing accountability by having pressure from your friends
+                  to complete your habits each day.<br />
+                  Coming soon&hellip;
+                </p>
+              </div>
+            </div>
 
-			<div id="footer">
-				<div id="otherLinks">
-					<div id="otherLinksContent">
-						<a href="https://www.facebook.com/anant.jain.5243" class="imgLink" target="_blank"><img src="../facebook.svg" class="otherLink" id="facebook" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://twitter.com/jainanant98" class="imgLink" target="_blank"><img src="../twitter.svg" class="otherLink" id="twitter" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://github.com/janant" class="imgLink" target="_blank"><img src="../github.svg" class="otherLink" id="github" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.linkedin.com/in/anantjain1" class="imgLink" target="_blank"><img src="../linkedin.svg" class="otherLink" id="linkedin" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.instagram.com/cuppaswift/" class="imgLink" target="_blank"><img src="../instagram.svg" class="otherLink" id="instagram" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-					</div>
-				</div>
-				<div id="credits">
-					<p id="creditsText">
-		        <img class="creditsImg" src="../code.svg" /> with <img class="creditsImg" src="../heart.svg" /> by Anant Jain
-		      </p>
-				</div>
-			</div>
+            <!-- Anant Jain - WWDC 2015 App -->
+            <div class='project rightProjectImage'>
+              <div class='projectPreview'>
+                <div class='projectHeader'>
+                  <img src='projects/Images/WWDC/Icon.png' class='projectIcon' />
+                  <div class='projectHeaderText'>
+                    <h3 class='projectName wwdcColor'>ANANT JAIN</h3>
+                    <h4 class='projectSubtitle'>(WWDC 2015 Scholarship app)</h4>
+                  </div>
+                </div>
+                <h5 class='projectPromotion wwdcColor'>WINNER - Apple WWDC 2015 Scholarship Award</h5>
+                <p class='projectText'>
+                  Inspired by my favorite childhood toy, my WWDC 2015 app operates like a wooden labyrinth.
+                  Simply tilt the device to roll the steel ball around and navigate through the app, all while
+                  learning about me and my background. Apple, Inc. recognized my submission as a perfect blend
+                  of the arts and sciences, granting me a free ticket to attend WWDC 2015 and recognizing me as
+                  one of the top 350 student developers across the globe.
+                </p>
+                <div class='projectLinks'>
+                  <a href='https://github.com/janant/WWDC-2015' class='githubLink'>
+                    <img src='projects/Images/CheckOutOnGithub.svg' />
+                  </a>
+                </div>
+              </div>
+              <img src='projects/Images/WWDC/Preview.png' class='projectImage' />
+            </div>
+          </div>
 
-		</div>
-	</body>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id='footerContainer'>
+        <div id='footerContent' class='card mainContent'>
+          <!-- Links to my profiles on other websites/services -->
+          <div class='footerRow footerLinksContainer'>
+            <a class='footerLink' href='https://www.facebook.com/anant.jain.5243' target='_blank'><img class='footerLinkImg' id='facebook' src='Images/Footer Images/facebook.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://twitter.com/jainanant98' target='_blank'><img class='footerLinkImg' id='twitter' src='Images/Footer Images/twitter.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://github.com/janant' target='_blank'><img class='footerLinkImg' id='github' src='Images/Footer Images/github.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.linkedin.com/in/anantjain1' target='_blank'><img class='footerLinkImg' id='linkedin' src='Images/Footer Images/linkedin.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.instagram.com/cuppaswift/' target='_blank'><img class='footerLinkImg' id='instagram' src='Images/Footer Images/instagram.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+          </div>
+          <!-- Credits at the bottom of the screen -->
+          <!-- "Coded with love by Anant Jain" -->
+          <div class='footerRow footerCreditsContainer'>
+            <img class="footerCreditsIcon" src="Images/Footer Images/code.svg" />
+            <p class='footerCreditsText'>with</p>
+            <img class="footerCreditsIcon" src="Images/Footer Images/heart.svg" />
+            <p class='footerCreditsText'>by Anant Jain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

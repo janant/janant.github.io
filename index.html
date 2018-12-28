@@ -1,115 +1,305 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<title>Anant Jain</title>
+<html>
+  <head>
+    <title>Anant Jain | Full-Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="./">
 
-		<!-- Gets jQuery from Google APIs -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-		</script>
+    <!-- Gets jQuery from Google APIs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<link type="text/css" rel="stylesheet" href="Stylesheets/main.css">
-		<link type="text/css" rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="Stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
 
-		<script type="text/javascript" src="Scripts/main.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="Scripts/main.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Overall content container with nav bar, main content, footer -->
+    <div id='overallContentContainer'>
+      <!-- Navigation bar -->
+      <div id='navigationBarContainer'>
+        <div id='navigationBar'>
+          <!-- The main top content of the navigation bar -->
+          <div class='mainContent' id='navigationBarContent'>
+            <!-- Header with my profile image and name -->
+            <a href='./' id='headerLink'>
+              <div id='headerDiv'>
+                <img src='Images/Navigation Bar Images/Profile Header Image.jpg' id='headerImg'/>
+                <h1 id='headerLabel'>ANANT JAIN</h1>
+              </div>
+            </a>
 
-	</head>
-	<body>
-		<!-- Hidden svg images to preload them when hovering -->
-		<div hidden></div>
-			<img hidden src="save_icon_highlighted.svg" />
-			<img hidden src="save_icon_selected.svg" />
-		</div>
+            <!-- Regular navigation items on the right side of the navigation bar -->
+            <div id='regularNavigation'>
+              <a href='about/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='regularNavigationLink'><h6 class='regularNavigationLabel'>Contact</h6></a>
+            </div>
+          </div>
+          <!-- The bottom content of the navigation bar -->
+          <!-- Contains the compact navigation menu -->
+          <div class='mainContent' id='navigationDropDownMenu'>
+            <!-- Navigation items -->
+            <div id='compactNavigationLabelsContainer'>
+              <a href='about/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>About Me</h6></a>
+              <a href='projects/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Projects</h6></a>
+              <a href='photography/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Photography</h6></a>
+              <a href='contact/' class='compactNavigationLink'><h6 class='compactNavigationLabel'>Contact</h6></a>
+            </div>
+            <!-- Show menu button -->
+            <div id='compactNavigationExpandButtonContainer'>
+              <form onsubmit='return false'>
+                <input type='image' id='compactNavigationDisplayButton' src='Images/Navigation Bar Images/chevron-down.svg' onclick='toggleCompactNavigationDisplay()'/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<div id="header">
-			<div id="headerContent">
-				<a href="./" id="navigationTitle">
-					<div id="headerTitle">
-						<img src="Profile Header Image.jpg" id="titleProfile">
-						<h1 id="title">ANANT JAIN</h1>
-					</div>
-				</a>
-				<ul id="navigation">
-					<li id="navigation"><a id="navigationSubtitle" href="about/">About Me</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="projects/">Projects</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="photography/">Photography</a></li>
-					<li id="navigation"><a id="navigationSubtitle" href="contact/">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="container">
-			<div id="headerDiv"></div>
-			<div id="hero">
-<!-- 				<img src="Image Text Background.png" id="heroTextBackground"> -->
-				<div id="heroContent">
-					<div id="heroText">
-						<h1 id="heroTitle"><strong>Hi.</strong> I&#39;m Anant.</h1>
-						<h2 id="heroDetail">I&#39;m a <strong>full-stack mobile developer</strong> with experience in <strong>machine learning</strong> and <strong>Big Data analytics</strong>. I&#39;m also a hobbyist photographer.</h2>
-					</div>
-				</div>
-			</div>
-			<div id="bulletFacts">
-				<div id="bulletFactsContent">
-					<ul id="bulletFacts">
-						<li><span>Presidential Scholar at the University of Southern California studying Computer Science (class of 2020)</span></li>
-						<li><span>Accomplished iOS developer with formal recognition from Apple, Inc. as a <strong>WWDC 2015 scholarship winner</strong></span></li>
-						<li><span>Firsthand experience implementing machine learning and Big Data analytics in my internships at <strong>Uber</strong> and <strong>Cisco</strong></span></li>
-						<li><span>Proficient in <strong>Swift</strong>, <strong>C++</strong>, <strong>Objective-C</strong>, <strong>Python</strong>, <strong>Java</strong>, and <strong>R</strong></span></li>
-						<br><br>
-						<li><span>Organizer, speaker, and judge for Tino Local Hack Day and CU Hacks hackathons</span></li>
-						<li><span>Served as a coach and a mentor for students to help them bring their app ideas to life as <strong>President of Tinovation club</strong></span></li>
-					</ul>
-				</div>
+      <!-- Main content -->
+      <div id='mainContentContainer'>
 
-				<!-- Download resume button -->
-				<a href="Resume_AnantJain.pdf" id="downloadResumeLink" target="_blank">
-					<div id="downloadResume">
-						<img src="save_icon.svg" id="downloadResumeIcon">
-						<h3 id="downloadResumeText">Download R&#233;sum&#233;</h3>
-					</div>
-				</a>
-				<!-- <span class="downloadWordResumeLink"><a href="Resume_AnantJain.docx">Download Word version</a></span> -->
+        <!-- Hero -->
+        <div class='card mainContent' id='hero'>
+          <img class='cardBackgroundImage' src='Images/hero.jpg' />
+          <div class='cardContent'>
+            <h2 id='heroTitle'><strong>Hi.</strong> I'm Anant.</h2>
+            <p id='heroDetail'>I'm a <strong>full-stack engineer</strong>
+              with experience in <strong>iOS development</strong>, <strong>machine learning</strong> and
+              <strong>Big Data analytics</strong>.<br />
+              I'm also a hobbyist photographer.</p>
+          </div>
+        </div>
 
-				<hr style="width: calc(100% - 100px); max-width: 960px; margin-top: 60px; height: 0.3px; border: none; background-color: #333">
-			</div>
+        <div class='mainContent frontPageContent'>
 
-			<div id="links">
-				<div id="linksContent">
-					<div id="linksItem">
-						<a href="projects/" class="linksItemLink">
-							<img src="Projects-Preview.jpg" class="linkPreview">
-							<h3 class="linkTitle">PROJECTS</h3>
-						</a>
-						<h4 class="linkDetail">Check out some of my work, including published apps on the App Store.</h4>
-					</div>
-					</a>
-					<div id="linksItem">
-						<a href="photography/" class="linksItemLink">
-							<img src="Photography-Preview.jpg" class="linkPreview">
-							<h3 class="linkTitle">PHOTOGRAPHY</h3>
-						</a>
-						<h4 class="linkDetail">Take a peek at some of my best shots.</h4>
-					</div>
-				</div>
-			</div>
+          <div class="cardContainer fullWidthCardContainer">
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/USC.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/USC.jpg' style="max-height: 600px;" />
+                <div class='caption bottomCaption'>
+                  <p>I'm a <strong>Presidential Scholar</strong> at <strong>University of Southern
+                     California</strong> (class of 2020), double-majoring in <strong>Computer Science</strong>
+                      and <strong>Business Administration</strong>. I'm an active member of numerous organizations
+                      on campus, including <strong>USC LavaLab, USC Scope, CAIS++, HackSC</strong>, and more.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-			<div id="footer">
-				<div id="otherLinks">
-					<div id="otherLinksContent">
-						<a href="https://www.facebook.com/anant.jain.5243" class="imgLink" target="_blank"><img src="facebook.svg" class="otherLink" id="facebook" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://twitter.com/jainanant98" class="imgLink" target="_blank"><img src="twitter.svg" class="otherLink" id="twitter" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://github.com/janant" class="imgLink" target="_blank"><img src="github.svg" class="otherLink" id="github" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.linkedin.com/in/anantjain1" class="imgLink" target="_blank"><img src="linkedin.svg" class="otherLink" id="linkedin" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-						<a href="https://www.instagram.com/cuppaswift/" class="imgLink" target="_blank"><img src="instagram.svg" class="otherLink" id="instagram" onmouseover="highlightButton(this)" onmouseout="highlightAllButtons()"></a>
-					</div>
-				</div>
-				<div id="credits">
-					<p id="creditsText">
-		        <img class="creditsImg" src="code.svg" /> with <img class="creditsImg" src="heart.svg" /> by Anant Jain
-		      </p>
-				</div>
-			</div>
+          <div class="cardContainer cardRow">
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/Apple-Park.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/Apple-Park.jpg' />
+                <div class='caption bottomCaption'>
+                  <h6>SUMMER 2018</h6>
+                  <p>Last summer, I worked as a software engineering intern at <strong>Apple, Inc.</strong>
+                    in Cupertino, CA. I developed an internal tool for the UIKit Frameworks team and demoed it to Apple executives.</p>
+                </div>
+              </div>
+            </div>
 
-		</div>
-	</body>
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/Uber.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/Uber.jpg' />
+                <div class='caption bottomCaption'>
+                  <h6>SUMMER 2015</h6>
+                  <p>I was a software engineering intern at <strong>Uber Technologies, Inc.</strong> in San Francisco, CA.
+                    I developed an application for a special project using the iOS SDK and machine learning APIs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/Cisco.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/Cisco.jpg' />
+                <div class='caption bottomCaption'>
+                  <h6>SUMMER 2014</h6>
+                  <p>I was a data analyst intern at <strong>Cisco Systems, Inc.</strong> in San Jose, CA.
+                  I used the R programming language to build statistical models to chart, summarize, and forecast business data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer cardRow">
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/WWDC.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/WWDC.jpg' />
+                <div class='caption bottomCaption'>
+                  <p>I'm a passionate developer who loves building great products. As a WWDC 2015 Scholarship Winner, I've been formally recognized
+                    by Apple as <strong>one of the top 350 student iOS developers</strong> across over 40 countries.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/LavaLab.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/LavaLab.jpg' />
+                <div class='caption bottomCaption'>
+                  <p>I also enjoy working in teams and presenting my work to the world. My team won the <strong>Best Demo</strong> award at
+                    USC LavaLab Demo Night. LavaLab is USC's premier startup incubator that recruits the <strong>top 5%</strong> of students.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/Hackathon.jpg" />
+              <div class='aboutMeCardContent bottomCaptionedContent'>
+                <img class='captionedImage bottomCaptionedImage' src='Images/Hackathon.jpg' />
+                <div class='caption bottomCaption'>
+                  <p>I like to experiment with new technologies, stacks, and ideas at hackathons. I've won <strong>Best iOS App/3rd Place Overall</strong>
+                  at HS Hacks and <strong>Best iOS App</strong> at HS Hacks II, and placed in the <strong>Top 20 Hacks</strong> at PennApps XII.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer cardRow">
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/HackSC.jpg" />
+              <div class='aboutMeCardContent sideCaptionedContent'>
+                <div class='caption sideCaption'>
+                  <p>I am currently the <strong>President of HackSC</strong>. Our mission is to cultivate hacker culture at USC with hackathons
+                    and weekly Hack Nights. I am responsible for business and community outreach to attract sponsors and enrich the hacker experience. </p>
+                </div>
+                <img class='captionedImage sideCaptionedImage' src='Images/HackSC.jpg' style="max-height: 600px;" />
+              </div>
+            </div>
+            <div class='card aboutMeCard'>
+              <img class="aboutMeBackgroundImage" src="Images/Tinovation.jpg" />
+              <div class='aboutMeCardContent sideCaptionedContent'>
+                <img class='captionedImage sideCaptionedImage' src='Images/Tinovation.jpg' style="max-height: 600px;" />
+                <div class='caption sideCaption'>
+                  <p>I was <strong>President of Tinovation Club</strong> at Cupertino High School. I helped create a curriculum to teach <strong>iOS, Android,
+                    and Web development</strong> to 300 students. I also organized <strong>Tino Local Hack Day</strong> and <strong>CU Hacks</strong>
+                    in 2015.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer cardRow">
+            <div class='card aboutMeCard'>
+              <div class='aboutMeCardContent textOnlyContent'>
+                <h2>Some of the things I've learned (so far):</h2>
+                <h3>Programming Languages</h3>
+                <p>C++, Swift, Java, Python, JavaScript, R, SQL, Objective-C, MATLAB</p>
+                <h3>Frameworks</h3>
+                <p>AWS, MongoDB, Express.js, AngularJS, Node.js, UIKit, CloudKit, Firebase, Parse, MySQL, jQuery</p>
+                <h3>Design & Creativity</h3>
+                <p>Adobe Photoshop, Illustrator, Lightroom, Sketch, Final Cut Pro, Motion</p>
+                <h3>Proficiencies</h3>
+                <p>Machine Learning, Big Data Analytics, iOS, watchOS, tvOS</p>
+              </div>
+            </div>
+            <div class='card aboutMeCard'>
+              <div class='aboutMeCardContent textOnlyContent'>
+                <h2>Other cool stuff about me:</h2>
+                <ul>
+                  <li>I'm a huge photography enthusiast. I shoot with a Canon 5D Mk III, a Canon 6D, and my iPhone. <a href="photography/" class="textLink">Check out my some of my shots here.</a></li>
+                  <li>In my spare time I enjoy calligraphy, baking, and hiking.</li>
+                  <li>I'm a second-degree black belt in Taekwondo.</li>
+                  <li>While growing up, I've moved eleven times across seven states&mdash;Michigan, Florida, Pennsylvania, New Jersey, Missouri, Oregon, and California.</li>
+                  <li>I'm a (self-proclaimed) connoisseur of groan-inducing puns.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer cardRow">
+            <div class='card aboutMeCard'>
+              <div class='aboutMeCardContent textOnlyContent horizontallyCenteredContent verticallyCenteredContent'>
+                <h2>Download my R&#233;sum&#233;:</h2>
+                <a href="Files/Resume_AnantJain.pdf" class="imageLink">
+                  <img src="Images/Download.svg" id="downloadResumeIcon" />
+                </a>
+                <!-- <p>(You can also download a <a href="Files/" class="textLink">Word-friendly version</a>, if you're into that)</p> -->
+              </div>
+            </div>
+            <div class='card aboutMeCard'>
+              <div class='aboutMeCardContent textOnlyContent horizontallyCenteredContent verticallyCenteredContent'>
+                <h2>Want to chat or grab coffee?</h2>
+                <p id="email">Drop me a line at <strong>anantjai@usc.edu</strong>.</p>
+                <p class="centered">(You can also reach out to me at any of the links in the bottom of the page.)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider between main content and other links near bottom -->
+          <hr class="sectionDivider"/>
+
+          <!-- Other links near bottom of the page to projects/photography -->
+          <div class="cardContainer cardRow">
+            <!-- Projects link -->
+            <div class='card aboutMeCard'>
+              <a href="projects/">
+                <div class='otherLinkContent'>
+                  <img class='otherLinkImage' src='Images/Projects-Preview.jpg' />
+                  <div class='darkTextBackground'></div>
+                  <div class="otherLinkText">
+                    <div class="otherLinkTitle">
+                      <h2>Projects</h2>
+                      <img src="Images/Right-Chevron.svg" />
+                    </div>
+                    <p>Check out some of my work, including apps on the App Store.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Photography link -->
+            <div class='card aboutMeCard'>
+              <a href="photography/">
+                <div class='otherLinkContent'>
+                  <img class='otherLinkImage' src='Images/Photography-Preview.jpg' />
+                  <div class='darkTextBackground'></div>
+                  <div class="otherLinkText">
+                    <div class="otherLinkTitle">
+                      <h2>Photography</h2>
+                      <img src="Images/Right-Chevron.svg" />
+                    </div>
+                    <p>Take a peek at some of my favorite shots.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div id='footerContainer'>
+        <div id='footerContent' class='card mainContent'>
+          <!-- Links to my profiles on other websites/services -->
+          <div class='footerRow footerLinksContainer'>
+            <a class='footerLink' href='https://www.facebook.com/anant.jain.5243' target='_blank'><img class='footerLinkImg' id='facebook' src='Images/Footer Images/facebook.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://twitter.com/jainanant98' target='_blank'><img class='footerLinkImg' id='twitter' src='Images/Footer Images/twitter.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://github.com/janant' target='_blank'><img class='footerLinkImg' id='github' src='Images/Footer Images/github.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.linkedin.com/in/anantjain1' target='_blank'><img class='footerLinkImg' id='linkedin' src='Images/Footer Images/linkedin.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+            <a class='footerLink' href='https://www.instagram.com/cuppaswift/' target='_blank'><img class='footerLinkImg' id='instagram' src='Images/Footer Images/instagram.svg' onmouseover='highlightButton(this)' onmouseout='highlightAllButtons()' /></a>
+          </div>
+          <!-- Credits at the bottom of the screen -->
+          <!-- "Coded with love by Anant Jain" -->
+          <div class='footerRow footerCreditsContainer'>
+            <img class="footerCreditsIcon" src="Images/Footer Images/code.svg" />
+            <p class='footerCreditsText'>with</p>
+            <img class="footerCreditsIcon" src="Images/Footer Images/heart.svg" />
+            <p class='footerCreditsText'>by Anant Jain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

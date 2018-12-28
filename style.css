@@ -1,277 +1,379 @@
+/* MARK: Hero */
+
 div#hero {
-	height: 700px;
-	width: 100%;
-
-	position: relative;
-
-	background-image: url("hero.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	z-index: 450;
+  margin-top: 14px;
+  height: 300px;
 }
-img#heroTextBackground {
-	height: 100%;
-	width: 100%;
-}
-h1#heroTitle {
-	font-family: "Montserrat", sans-serif;
+
+h2#heroTitle {
+  margin: auto 0 8px 0;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
 	font-weight: 300;
-	font-size: 45px;
+	font-size: 30pt;
 
-	text-shadow: 0px 1px 15px black;
-
-	margin-bottom: 8px;
-
-	color: white;
+  text-shadow: 0px 1px 15px black;
+  color: white;
 }
-h1#heroTitle strong {
-	font-weight: 600;
-}
-h2#heroDetail {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 200;
-	font-size: 25px;
-
-	line-height: 1.4;
-	text-shadow: 0px 1px 15px black;
-
-	margin-top: 0px;
-
-	color: white;
-}
-h2#heroDetail strong {
-	font-weight: 400;
-}
-div#heroContent {
-	height: 100%;
-	max-width: 960px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	margin-left: auto;
-	margin-right: auto;
-
-}
-div#heroText {
-	display: inline-block;
-	position: absolute;
-	bottom: 0px;
+h2#heroTitle strong {
+  font-weight: 600;
 }
 
-div#bulletFacts {
-	position: relative;
+p#heroDetail {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  line-height: 1.4;
+
+  text-shadow: 0px 1px 15px black;
+  color: white;
+}
+p#heroDetail strong {
+  font-weight: 400;
 }
 
-div#bulletFactsContent {
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
+/* MARK: Non-hero front-page content */
+
+div.frontPageContent {
+  padding: 20px 0px;
 }
 
-ul#bulletFacts {
-	margin: 50px 0px auto 0px;
+/* MARK: Types of card containers */
+
+div.cardContainer {
+  width: 100%;
 }
 
-ul#bulletFacts li {
-	font-family: "Montserrat", sans-serif;
-	font-size: 12pt;
-	font-weight: 300;
-	margin: 0 0 8px 0;
+div.cardContainer:not(:first-child) {
+  margin-top: 20px;
 }
 
-ul#bulletFacts li span {
-	font-size: 16pt;
-	line-height: 1.6;
+div.fullWidthCardContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-ul#bulletFacts li span strong {
-	font-weight: 400;
+div.cardRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-div#downloadResume {
-	width: 210px;
-	height: 110px;
-	margin: 40px auto 30px auto;
-	border-radius: 25px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #007AFF;
-
-	padding-top: 20px;
-
-	-webkit-transition: background-color 0.15s;
+div.cardRow div.aboutMeCard:not(:first-child) {
+  margin-left: 20px;
 }
+
+/* MARK: Cards */
+
+.aboutMeCard {
+  flex: 1 0 0;
+  /* margin: 5px 5px; */
+  display: inline-block;
+}
+
+img.aboutMeBackgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 0;
+}
+
+div.aboutMeCardContent {
+  display: flex;
+  height: 100%;
+  align-content: stretch;
+  z-index: 1;
+}
+
+div.bottomCaptionedContent {
+  flex-flow: column nowrap;
+}
+
+div.sideCaptionedContent {
+  flex-flow: row nowrap;
+  max-height: 375px;
+}
+
+div.textOnlyContent {
+  background-color: #E6E6E2;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
+div.otherLinkContent {
+  height: 350px;
+}
+
+div.horizontallyCenteredContent {
+  align-items: center;
+}
+
+div.verticallyCenteredContent {
+  justify-content: center;
+}
+
+img.captionedImage {
+  z-index: 1;
+
+  object-fit: cover;
+
+  width: 100%;
+  min-width: 0px;
+  min-height: 0px;
+}
+
+img.bottomCaptionedImage {
+  flex: 1 1 auto;
+}
+
+img.sideCaptionedImage {
+  flex: 0 1 auto;
+}
+
+div.caption {
+  flex: 0 1 auto;
+  padding: 10px;
+
+  /* Adds the white blur effect */
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+div.caption p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+div.sideCaption {
+  max-width: 250px;
+}
+
+div.bottomCaption {
+}
+
+div.caption p strong {
+  font-weight: 400;
+}
+
+div.caption h6 {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 10pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #777;
+}
+
+div.textOnlyContent h1 {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 14pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: black;
+
+  text-align: center;
+}
+
+div.textOnlyContent h2 {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 13pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: black;
+
+  text-align: center;
+}
+
+div.textOnlyContent h3 {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #777;
+}
+
+div.textOnlyContent h4 {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 10pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
 img#downloadResumeIcon {
-	display: block;
-	margin: auto auto auto auto;
-	width: 38px;
-	height: 50px;
-}
-h3#downloadResumeText {
-	display: block;
-	margin: auto auto auto auto;
-
-	font-family: "Montserrat", sans-serif;
-	font-size: 14pt;
-	text-align: center;
-	color: #007AFF;
-	font-weight: 300;
-
-	padding-top: 12px;
-
-	-webkit-transition: color 0.15s;
+  width: 40px;
+  heigth: auto;
 }
 
-a#downloadResumeLink {
-	width: 200px;
-	height: 125px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 40px;
-
-	display: block;
-
-	text-decoration: none;
+div.textOnlyContent img {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0px;
 }
 
-a#downloadResumeLink:hover div {
-	background-color: #DDDDDD;
-	border-color: #666666;
-	-webkit-transition: background-color 0.15s, border-color 0.15s;
-}
-a#downloadResumeLink:active div {
-	background-color: #007AFF;
-	border-color: #007AFF;
-	-webkit-transition: background-color 0.15s, border-color 0.15s;
-}
-a#downloadResumeLink:hover img {
-	content: url("save_icon_highlighted.svg");
-	-webkit-transition: content 0.15s;
-}
-a#downloadResumeLink:active img {
-	content: url("save_icon_selected.svg");
-	-webkit-transition: content 0.15s;
-}
-a#downloadResumeLink:visited h3 {
-	color: #007AFF;
-}
-a#downloadResumeLink:hover h3 {
-	color: #666666;
-	-webkit-transition: color 0.15s;
-}
-a#downloadResumeLink:active h3 {
-	color: white;
-	-webkit-transition: color 0.15s;
+div.textOnlyContent p {
+  margin: 0px;
+  padding: 0px;
+
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
-/* .downloadWordResumeLink {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-
-	font-family: "Montserrat", sans-serif;
-	font-size: 12pt;
-	color: #007AFF;
-	font-weight: 300;
-	text-decoration: none;
-} */
-
-div#links {
-	width: 100%;
-	height: 500px;
-	position: relative;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	padding-bottom: 160px;
+div.textOnlyContent strong {
+  font-weight: 400;
 }
 
-div#linksContent {
-	width: 100%;
-	height: 100%;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-
-	display: flex;
-	justify-content: space-between;
+div.textOnlyContent li {
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
-div#linksItem {
-	width: 45%;
-	margin: 50px auto auto auto;
+div.textOnlyContent li:not(:first-child) {
+  margin-top: 10px;
 }
 
-img.linkPreview {
-	width: 100%;
-	height: auto;
-	margin-bottom: 13px;
-}
-h3.linkTitle {
-	width: 100%;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	letter-spacing: 2.5px;
-	color: #007AFF;
-	text-align: center;
-	font-size: 20pt;
-	margin-top: 5px;
-	margin-bottom: 13px;
+img.otherLinkImage {
+  object-fit: cover;
 
-	text-decoration: none;
+  width: 100%;
+  height: 100%;
 
-	-webkit-transition: color 0.15s;
-}
-h4.linkDetail {
-	width: 100%;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	text-align: center;
-	font-size: 12pt;
-	margin-top: 10px;
-	line-height: 1.6;
+  z-index: 1;
 }
 
-a.linksItemLink {
-	text-decoration: none;
-	color: #007AFF;
-	text-decoration: none;
-	-webkit-transition: color 0.15s;
-}
-a.linksItemLink h3:hover {
-	color: #999999;
-	text-decoration: none;
-	-webkit-transition: color 0.15s;
-}
-a.linksItemLink h3:visited {
-	color: #007AFF;
-	text-decoration: none;
-	-webkit-transition: color 0.15s;
-}
-a.linksItemLink h3:active {
-	color: #666666;
-	text-decoration: none;
-	-webkit-transition: color 0.15s;
+div.darkTextBackground {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("Images/Dark-Text-Background.png");
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
 }
 
-@media (max-width: 1600px) {
-    div#hero {
-	    height: 550px;
-    }
+div.otherLinkText {
+  position: absolute;
+
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
+
+  color: white;
+
+  z-index: 3;
 }
 
-@media (max-width: 970px) {
-	h1#heroTitle {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	h2#heroDetail {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	ul#bulletFacts {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
+div.otherLinkText h2 {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 18pt;
+  text-shadow: 0px 1px 15px black;
+}
+
+div.otherLinkText p {
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
+
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+
+  text-shadow: 0px 1px 15px black;
+}
+
+div.otherLinkTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.otherLinkTitle img {
+  position: relative;
+  top: 1px;
+
+  width: 10px;
+  height: 20px;
+}
+
+p#email {
+  margin: 10px 0px;
+}
+
+.centered {
+  text-align: center;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+@media only screen and (max-width: 650px) {
+  h2#heroTitle {
+  	font-size: 20pt;
+  }
+  p#heroDetail {
+    font-size: 14pt;
+  }
+
+  div.cardRow div.aboutMeCard {
+    flex-basis: 100%;
+  }
+
+  div.cardRow div.aboutMeCard:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  h2#heroTitle {
+  	font-size: 17pt;
+  }
+  p#heroDetail {
+    font-size: 12pt;
+  }
 }

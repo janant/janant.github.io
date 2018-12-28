@@ -1,235 +1,648 @@
-@font-face {
-	font-family: "Montserrat";
-	src: url("../Fonts/Montserrat-Thin.ttf") format("truetype");
-	font-weight: 100;
-}
+/* MARK: Fonts */
+
 @font-face {
 	font-family: "Montserrat";
 	src: url("../Fonts/Montserrat-ExtraLight.ttf") format("truetype");
 	font-weight: 200;
 }
+
 @font-face {
 	font-family: "Montserrat";
 	src: url("../Fonts/Montserrat-Light.ttf") format("truetype");
 	font-weight: 300;
 }
+
 @font-face {
-	font-family: "Montserrat";
-	src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
-	font-weight: 400;
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
+
 @font-face {
-	font-family: "Montserrat";
-	src: url("../Fonts/Montserrat-Medium.ttf") format("truetype");
-	font-weight: 500;
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
 }
+
 @font-face {
-	font-family: "Montserrat";
-	src: url("../Fonts/Montserrat-SemiBold.ttf") format("truetype");
-	font-weight: 600;
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
 }
 
-div#header {
-	background-color: rgba(255, 255, 255, 0.87);
-	width: 100%;
-	height: 60px;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	-webkit-backdrop-filter: blur(10px);
-	z-index: 500;
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Light.ttf") format("truetype");
+  font-weight: 300;
 }
 
-div#headerTitle {
-	height: 100%;
-
-	background-color: transparent;
-	margin-left: 0px;
-
-	display: inline-block;
-	float: left;
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
 
-div#headerContent {
-	max-width: 960px;
-	min-width: 750px;
-	width: 100%;
-	height: 100%;
-
-	background-color: transparent;
-
-	margin-left: auto;
-	margin-right: auto;
-
-	display: table;
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../Fonts/TradeGothic-Bold.ttf") format("truetype");
+  font-weight: 500;
 }
 
-img#titleProfile {
-	height: 40px;
-	width: 40px;
-	border-radius: 20px;
-	float: left;
+/* MARK: CSS variables */
 
-	margin-top: 10px;
+:root {
+  /* Variables to manage the navigation bar height */
+  /* On mobile displays, the navigation bar becomes compact */
+  --regularNavBarHeight: 60px;
+  --compactNavBarHeight: 45px;
+
+  /* Variables to manage the height of the drop down navigation menu */
+  --regularDropDownHeight: 0px; /* Don't display on regular width */
+  --compactCollapsedDropDownHeight: 30px; /* Just show the expand button indicator */
+  --compactExpandedDropDownHeight: 195px; /* Full menu height */
+
+  /* The maximum width for content that stretches the width of the page */
+  --maxContentWidth: 1200px;
+  --compactContentMargin: 10px; /* Left/right margin when content is compact */
+
+  /* Variables to manage the footer */
+  --footerHeight: 135px;
 }
 
-h1#title {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 400;
-	margin: 13px 13px auto 13px;
-	float: left;
-	font-size: 20pt;
+/* MARK: General styles */
+
+div.mainContent {
+  /* Fills up to the max content width */
+  max-width: var(--maxContentWidth);
+
+  /* Centered */
+  margin: 0px auto;
 }
 
-ul#navigation {
-	float: right;
-	margin-top: 20px;
+/* Remove the default margin on the body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+	background-color: white;
 }
 
-li#navigation {
-    display: inline;
-    font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
-	font-weight: 400;
-	padding: 2px 5px 2px 5px;
-	margin: 0px 5px 0xp 5px;
+/* Container with navigation bar, main content container, footer */
+/* Needed to make footer stick to bottom */
+div#overallContentContainer {
+  min-height: 100%;
+  position: relative;
 }
 
-a#navigationTitle {
+/* MARK: Navigation bar styles */
+
+/* Container for the navigation bar to push all content underneath it */
+div#navigationBarContainer {
+  height: calc(var(--regularNavBarHeight) + var(--regularDropDownHeight))
+}
+
+/* Navigation bar at the top of each page */
+div#navigationBar {
+  /* Pins to the top and stretches to the edges */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  /* Sticks the navigation bar at the front */
+  z-index: 500;
+
+  /* Adds the white blur effect */
+  background-color: rgba(255, 255, 255, 0.87);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+div#navigationBarContent {
+  /* Adjusts automatically as width becomes compact */
+  height: var(--regularNavBarHeight);
+
+  /* Makes layout of header on left, navigation on right easier */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div#navigationDropDownMenu {
+  height: var(--regularDropDownHeight);
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* Main container with the content for each website. */
+/* Adds the padding for the footer automatically */
+div#mainContentContainer {
+  position: relative;
+  padding-bottom: var(--footerHeight);
+}
+
+/* MARK: Header that contains my image and name in the navigation bar */
+
+/* Contains my profile picture and name in the navigation bar */
+div#headerDiv {
+  height: 100%;
+
+  /* Centers the header contents vertically */
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* Image with my profile picture in the navigation bar */
+img#headerImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+
+  position: relative;
+}
+
+/* Big label in the navigation bar that has my name */
+h1#headerLabel {
+  display: inline;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20pt;
+
+  margin: 0 0 0 10px; /* Adds some spacing between image and name */
+
+  position: relative;
+}
+
+/* Link animations */
+a#headerLink {
 	text-decoration: none;
 	color: black;
 
 	-webkit-transition: color 0.2s;
+
+  margin: 0;
+  padding: 0;
 }
-a#navigationTitle img {
+a#headerLink img {
 	opacity: 1.0;
 	-webkit-transition: opacity 0.2s;
 }
-a#navigationTitle:visited {
-	text-decoration: none;
-	color: black;
-}
-a#navigationTitle:hover {
+a#headerLink:hover {
 	color: #666666;
 	-webkit-transition: color 0.2s;
 }
-a#navigationTitle:hover img {
+a#headerLink:hover img {
 	opacity: 0.8;
 	-webkit-transition: opacity 0.2s;
 }
-
-a#navigationSubtitle {
+a#headerLink:visited {
 	text-decoration: none;
 	color: black;
-	padding: 3px 6px 3px 6px;
+}
+
+/* MARK: Regular navigation on the right of the navigation bar */
+
+div#regularNavigation {
+  /* Vertically-centers the navigation items */
+  display: inline-flex;
+  align-items: center;
+
+  /* Right-justifies the navigation */
+  margin-left: auto;
+}
+
+h6.regularNavigationLabel {
+  /* Side-by-side instead of on new lines */
+  display: inline;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12pt;
+
+  padding: 2px 5px 2px 5px; /* Spacing for highlight */
+	margin: 0px 7px 0px 7px; /* Spacing between labels */
+}
+
+/* Link animations */
+a.regularNavigationLink {
+	text-decoration: none;
+	color: black;
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
-a#navigationSubtitle:visited {
-	color: black;
-	border-radius: 3px;
-}
-a#navigationSubtitle:hover {
+a.regularNavigationLink:hover h6 {
 	background-color: #DDDDDD;
 	color: #666666;
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
-a#navigationSubtitle:active {
+a.regularNavigationLink:active h6 {
 	background-color: #007AFF;
 	color: white;
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
-a#navigationSubtitleCurrent {
+a.regularNavigationLink:visited h6 {
+	color: black;
+	border-radius: 3px;
+}
+
+a.regularNavigationLinkCurrent {
+	text-decoration: none;
+}
+a.regularNavigationLinkCurrent h6 {
 	text-decoration: none;
 	color: white;
-	padding: 3px 6px 3px 6px;
 	border-radius: 3px;
 
 	background-color: #007AFF;
 }
-
-body, html {
-	min-width: 750px;
-	margin: 0;
-	padding: 0;
-	height: 100%;
+a.regularNavigationLinkCurrent:hover h6 {
+	text-decoration: none;
+}
+a.regularNavigationLinkCurrent:active h6 {
+	text-decoration: none;
+}
+a.regularNavigationLinkCurrent:visited h6 {
+	text-decoration: none;
 }
 
-div#headerDiv {
-	height: 60px;
-	width: 100%;
+/* MARK: Compact navigation that appears when the expand button is pressed */
+
+div#compactNavigationExpandButtonContainer {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+
+  /* Horizontally centers the button */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-div#container {
-	min-height:100%;
-  position:relative;
+input#compactNavigationDisplayButton {
+  height: 11px;
 }
 
-div#otherLinks {
-	width: 100%;
-	height: 100px;
-	position: relative;
-	background-color: #222222;
+div#compactNavigationLabelsContainer {
+  /* Position above the drop down button */
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  right: 0px;
+
+  /* Lays out navigation labels vertically and horizontaly centered */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
-div#otherLinksContent {
-	width: 100%;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	padding-top: 30px;
+h6.compactNavigationLabel {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12pt;
+
+  text-align: center;
+
+  border-radius: 5px;
+
+  padding: 10px 5px 10px 5px; /* Spacing for highlight */
+	margin: 1px 0px 0px 0px; /* Spacing between labels */
 }
 
-.otherLink {
-	height: 40px;
-	width: 40px;
-	display: inline-block;
-	margin: 0px 4px 0px 4px;
+/* Link animations */
+a.compactNavigationLink {
+	text-decoration: none;
+	color: black;
+	/* border-radius: 3px; */
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
 }
+a.compactNavigationLink:hover h6 {
+	background-color: #DDDDDD;
+	color: #666666;
+	/* border-radius: 3px; */
 
-div#credits {
-	width: 100%;
-	height: 60px;
-	position: relative;
-	background-color: #222222;
+	-webkit-transition: background-color 0.1s, color 0.1s;
 }
-
-p#creditsText {
-	text-align: center;
-	width: 100%;
-
+a.compactNavigationLink:active h6 {
+	background-color: #007AFF;
 	color: white;
-	font-size: 14pt;
+	/* border-radius: 3px; */
+
+	-webkit-transition: background-color 0.1s, color 0.1s;
+}
+a.compactNavigationLink:visited h6 {
+	color: black;
+	/* border-radius: 3px; */
+}
+
+a.compactNavigationLinkCurrent {
+	text-decoration: none;
+}
+a.compactNavigationLinkCurrent h6 {
+	text-decoration: none;
+	color: white;
+
+	background-color: #007AFF;
+}
+a.compactNavigationLinkCurrent:hover h6 {
+	text-decoration: none;
+}
+a.compactNavigationLinkCurrent:active h6 {
+	text-decoration: none;
+}
+a.compactNavigationLinkCurrent:visited h6 {
+	text-decoration: none;
+}
+
+/* MARK: Footer */
+
+/* Container for the footer, needed to pin to the bottom of the screen */
+div#footerContainer {
+  /* Stick to bottom */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+
+  height: var(--footerHeight);
+
+  padding: 0;
+  margin: 0;
+}
+
+/* Contains all the content of the footer and lays out footer rows vertically */
+div#footerContent {
+  height: calc(100% - 10px);
+  background-color: black;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+div.footerRow {
+  margin: 6px auto;
+}
+
+div#footerLinksContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+a.footerLink {
+  margin: 0px 4px;
+}
+
+img.footerLinkImg {
+  display: inline;
+
+  height: 40px;
+  width: 40px;
+}
+
+div#footerCreditsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+p.footerCreditsText {
+  display: inline;
+
+  color: white;
+	font-size: 12pt;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 }
 
-div#footer {
-	width: 100%;
-	height: 160px;
-	position: absolute;
-	background-color: #222222;
-	bottom: 0;
-}
+img.footerCreditsIcon {
+  height: 17px;
+  width: auto;
 
-img.creditsImg {
-	display: inline-block;
+  display: inline;
+
 	position: relative;
 	top: 3px;
 }
 
-@media (max-width: 970px) {
-    img#titleProfile {
-		margin-left: 20px;
+/* MARK: Link styling */
+a.textLink {
+	text-decoration: none;
+
+	/* Blue links */
+	color: #007AFF;
+	opacity: 1.0;
+
+	-webkit-transition: color 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+a.textLink:hover {
+	/* Blue links */
+	color: #007AFF;
+	opacity: 1.0;
+
+	-webkit-transition: color 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+a.textLink:visited {
+	text-decoration: none;
+
+	/* Blue links */
+	color: #007AFF;
+	opacity: 1.0;
+}
+a.textLink:active {
+	/* Transparent blue links */
+	color: #007AFF;
+	opacity: 0.4;
+
+	-webkit-transition: color 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+
+a.imageLink {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.2s;
+}
+a.imageLink:hover {
+	opacity: 1.0;
+	-webkit-transition: opacity 0.2s;
+}
+a.imageLink:visited {
+	opacity: 1.0;
+}
+a.imageLink:active {
+	opacity: 0.4;
+	-webkit-transition: opacity 0.2s;
+}
+
+/* MARK: Card UI */
+
+div.card {
+	--section-border-radius: 15px;
+  border-radius: var(--section-border-radius);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.30);
+  overflow: hidden;
+  position: relative;
+  background-color: lightGray;
+
+	-webkit-backdrop-filter: blur(0px);
+}
+
+img.cardBackgroundImage {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+div.cardContent {
+	--sectionContent-padding: 15px;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	padding: var(--sectionContent-padding);
+}
+
+div.canFillWidth {
+
+}
+
+/* MARK: Dividers */
+
+hr.sectionDivider {
+	margin: 35px 5px;
+
+	border: none;
+  height: 0.5px;
+  /* Set the hr color */
+  color: #777; /* old IE */
+  background-color: #777; /* Modern Browsers */
+}
+
+/* MARK: Section titles */
+
+h1.pageTitle {
+  font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	letter-spacing: 4px;
+	font-size: 30pt;
+
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+h2.pageSubtitle {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	letter-spacing: 4px;
+	font-size: 25pt;
+
+	width: 100%;
+	text-align: center;
+
+	margin-top: 0px;
+}
+
+p.pageText {
+	margin: 0;
+  padding: 0;
+
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+p.pageText strong {
+	font-weight: 400;
+}
+
+/* MARK: Resizing the window */
+
+/* Attributes for compact width (mobile site) */
+@media only screen and (max-width: 650px) {
+  /* Adjust navigation bar container height to push content down appropriately */
+  div#navigationBarContainer {
+    height: calc(var(--compactNavBarHeight) + var(--compactCollapsedDropDownHeight))
+  }
+
+  div#navigationBarContent {
+    /* Shrink the nav bar */
+    height: var(--compactNavBarHeight);
+  }
+
+  img#headerImg {
+    /* Shrink the header image */
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+
+    /* Move the image down a bit */
+    top: 2px;
+  }
+
+  h1#headerLabel {
+    /* Shrink the header label */
+    font-size: 18pt;
+    /* Move the image down a bit */
+    top: 2px;
+  }
+
+  div#navigationDropDownMenu {
+    /* Show expansion indicator */
+    height: var(--compactCollapsedDropDownHeight);
+  }
+
+  div#regularNavigation {
+    /* Hide the regular navigation system when compact layout occurs */
+    display: none;
+  }
+
+	div.canFillWidth {
+		/* max-width: none;
+		margin-left: 0px;
+		margin-right: 0px; */
+
+		box-shadow: initial;
+		border-radius: initial;
+
+		--compactContentMargin: 0xp
 	}
 
-	ul#navigation {
-		margin-right: 15px;
+	hr.sectionDivider {
+		margin-top: 25px;
+		margin-bottom: 25px;
 	}
+
+	h1.pageTitle {
+  	font-size: 22pt;
+		margin-top: 0px;
+  }
+
+	h2.pageSubtitle {
+		font-size: 18pt;
+	}
+}
+
+/* Attributes for beyond max main content width */
+/* Max content width + 2 * compactContentMargin (since left and right) */
+@media only screen and (max-width: 1220px) {
+  div.mainContent {
+    /* Add some extra margins to the edges */
+    margin: 0px var(--compactContentMargin);
+  }
 }
