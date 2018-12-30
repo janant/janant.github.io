@@ -388,11 +388,13 @@ div#footerContent {
 
 div.footerRow {
   margin: 6px auto;
+	width: 100%;
 }
 
-div#footerLinksContainer {
+div.footerLinksContainer {
   display: flex;
   flex-flow: row nowrap;
+	justify-content: center;
 }
 
 a.footerLink {
@@ -406,9 +408,10 @@ img.footerLinkImg {
   width: 40px;
 }
 
-div#footerCreditsContainer {
+div.footerCreditsContainer {
   display: flex;
   flex-flow: row nowrap;
+	justify-content: center;
 }
 
 p.footerCreditsText {
@@ -418,6 +421,8 @@ p.footerCreditsText {
 	font-size: 12pt;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
+
+	margin: 0;
 }
 
 img.footerCreditsIcon {
@@ -427,7 +432,11 @@ img.footerCreditsIcon {
   display: inline;
 
 	position: relative;
-	top: 3px;
+	top: 2px;
+}
+
+div.footerCreditsContainer *:not(:first-child) {
+	margin-left: 5px;
 }
 
 /* MARK: Link styling */
