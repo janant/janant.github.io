@@ -560,10 +560,12 @@ h2.pageSubtitle {
 	letter-spacing: 4px;
 	font-size: 25pt;
 
+	margin-top: 0px;
+}
+
+h2.centered {
 	width: 100%;
 	text-align: center;
-
-	margin-top: 0px;
 }
 
 p.pageText {
