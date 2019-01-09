@@ -582,6 +582,10 @@ p.pageText strong {
 	font-weight: 400;
 }
 
+p.paragraph {
+	margin-bottom: 20px;
+}
+
 /* MARK: Resizing the window */
 
 /* Attributes for compact width (mobile site) */
