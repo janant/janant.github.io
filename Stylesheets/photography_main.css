@@ -4,7 +4,7 @@ h1.photographySubtitle {
 
 	letter-spacing: 3px;
 	font-size: 23pt;
-	color: #222222;
+	color: var(--secondaryLabelColor);
 	text-align: left;
 
 	margin-top: 10px;
@@ -142,6 +142,9 @@ div.photoInfoContainer {
 img.locationIcon {
 	height: 20px;
 	width: auto;
+	
+	position: relative;
+	top: 2px;
 }
 
 p.locationText {
@@ -151,7 +154,7 @@ p.locationText {
 
 	margin: 0px 0px 0px 10px;
 
-	color: #888888;
+	color: var(--secondaryLabelColor);
 }
 
 @media only screen and (max-width: 900px) {

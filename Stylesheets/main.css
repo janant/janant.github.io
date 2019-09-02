@@ -67,6 +67,18 @@
 
   /* Variables to manage the footer */
   --footerHeight: 135px;
+
+	/* Dynamic colors */
+	--systemBlue: #007AFF;
+	--systemBackground: white;
+	--labelColor: black;
+	--secondaryLabelColor: #505050;
+	--navigationHoverColor: #666666;
+	--navigationHoverBackgroundColor: #DDDDDD;
+	--navigationBarShadowColor: #EEEEEE;
+
+	/* My site supports dark mode! */
+	color-scheme: light dark;
 }
 
 /* MARK: General styles */
@@ -84,7 +96,8 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-	background-color: white;
+
+	background-color: var(--systemBackground);
 }
 
 /* Container with navigation bar, main content container, footer */
@@ -177,7 +190,7 @@ h1#headerLabel {
 /* Link animations */
 a#headerLink {
 	text-decoration: none;
-	color: black;
+	color: var(--labelColor);
 
 	-webkit-transition: color 0.2s;
 
@@ -189,7 +202,7 @@ a#headerLink img {
 	-webkit-transition: opacity 0.2s;
 }
 a#headerLink:hover {
-	color: #666666;
+	color: var(--navigationHoverColor);
 	-webkit-transition: color 0.2s;
 }
 a#headerLink:hover img {
@@ -198,7 +211,7 @@ a#headerLink:hover img {
 }
 a#headerLink:visited {
 	text-decoration: none;
-	color: black;
+	color: var(--labelColor);
 }
 
 /* MARK: Regular navigation on the right of the navigation bar */
@@ -227,27 +240,27 @@ h6.regularNavigationLabel {
 /* Link animations */
 a.regularNavigationLink {
 	text-decoration: none;
-	color: black;
+	color: var(--labelColor);
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.regularNavigationLink:hover h6 {
-	background-color: #DDDDDD;
-	color: #666666;
+	background-color: var(--navigationHoverBackgroundColor);
+	color: var(--navigationHoverColor);
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.regularNavigationLink:active h6 {
-	background-color: #007AFF;
+	background-color: var(--systemBlue);
 	color: white;
 	border-radius: 3px;
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.regularNavigationLink:visited h6 {
-	color: black;
+	color: var(--labelColor);
 	border-radius: 3px;
 }
 
@@ -259,7 +272,7 @@ a.regularNavigationLinkCurrent h6 {
 	color: white;
 	border-radius: 3px;
 
-	background-color: #007AFF;
+	background-color: var(--systemBlue);
 }
 a.regularNavigationLinkCurrent:hover h6 {
 	text-decoration: none;
@@ -318,28 +331,24 @@ h6.compactNavigationLabel {
 /* Link animations */
 a.compactNavigationLink {
 	text-decoration: none;
-	color: black;
-	/* border-radius: 3px; */
+	color: var(--labelColor);
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.compactNavigationLink:hover h6 {
-	background-color: #DDDDDD;
-	color: #666666;
-	/* border-radius: 3px; */
+	background-color: var(--navigationHoverBackgroundColor);
+	color: var(--navigationHoverColor);
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.compactNavigationLink:active h6 {
-	background-color: #007AFF;
+	background-color: var(--systemBlue);
 	color: white;
-	/* border-radius: 3px; */
 
 	-webkit-transition: background-color 0.1s, color 0.1s;
 }
 a.compactNavigationLink:visited h6 {
-	color: black;
-	/* border-radius: 3px; */
+	color: var(--labelColor);
 }
 
 a.compactNavigationLinkCurrent {
@@ -349,7 +358,7 @@ a.compactNavigationLinkCurrent h6 {
 	text-decoration: none;
 	color: white;
 
-	background-color: #007AFF;
+	background-color: var(--systemBlue);
 }
 a.compactNavigationLinkCurrent:hover h6 {
 	text-decoration: none;
@@ -444,7 +453,7 @@ a.textLink {
 	text-decoration: none;
 
 	/* Blue links */
-	color: #007AFF;
+	color: var(--systemBlue);
 	opacity: 1.0;
 
 	-webkit-transition: color 0.2s;
@@ -452,7 +461,7 @@ a.textLink {
 }
 a.textLink:hover {
 	/* Blue links */
-	color: #007AFF;
+	color: var(--systemBlue);
 	opacity: 1.0;
 
 	-webkit-transition: color 0.2s;
@@ -462,12 +471,12 @@ a.textLink:visited {
 	text-decoration: none;
 
 	/* Blue links */
-	color: #007AFF;
+	color: var(--systemBlue);
 	opacity: 1.0;
 }
 a.textLink:active {
 	/* Transparent blue links */
-	color: #007AFF;
+	color: var(--systemBlue);
 	opacity: 0.4;
 
 	-webkit-transition: color 0.2s;
@@ -551,6 +560,8 @@ h1.pageTitle {
 
 	margin-top: 10px;
 	margin-bottom: 20px;
+
+	color: var(--labelColor);
 }
 
 h2.pageSubtitle {
@@ -561,6 +572,8 @@ h2.pageSubtitle {
 	font-size: 25pt;
 
 	margin-top: 0px;
+
+	color: var(--labelColor);
 }
 
 h2.centered {
@@ -576,6 +589,8 @@ p.pageText {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 1.4;
+
+	color: var(--labelColor);
 }
 
 p.pageText strong {
@@ -660,4 +675,32 @@ p.paragraph {
     /* Add some extra margins to the edges */
     margin: 0px var(--compactContentMargin);
   }
+}
+
+/* Attributes for dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Dynamic colors */
+		--systemBlue: #0A84FF;
+		--systemBackground: #1E1E1E;
+		--labelColor: white;
+		--secondaryLabelColor: #AFAFAF;
+		--navigationHoverColor: #AAAAAA;
+		--navigationHoverBackgroundColor: #444444;
+		--navigationBarShadowColor: #666666;
+	}
+	/* Navigation bar at the top of each page */
+	div#navigationBar {
+	  /* Changes the white blur to a dark blur */
+	  background-color: rgba(30, 30, 30, 0.7);
+	  -webkit-backdrop-filter: blur(10px);
+	}
+
+	a#headerLink:hover {
+		color: #AAAAAA;
+	}
+
+	div.card {
+	  background-color: black;
+	}
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="301px" height="371px" viewBox="0 0 301 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>location_icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-951.000000, -103.000000)" fill="#AFAFAF" fill-rule="nonzero">
+            <g id="location_icon" transform="translate(951.000000, 103.000000)">
+                <path d="M150.5,0 C67.3648615,0 0,62.275 0,139.125 C0,255.043571 125.40403,371 150.5,371 C175.59597,371 301,255.043571 301,139.125 C301,62.275 233.635139,0 150.5,0 L150.5,0 Z M150.5,222.6 C108.951385,222.6 75.25,189.361429 75.25,148.4 C75.25,107.438571 108.951385,74.2 150.5,74.2 C192.048615,74.2 225.75,107.438571 225.75,148.4 C225.75,189.361429 192.048615,222.6 150.5,222.6 L150.5,222.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

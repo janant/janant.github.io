@@ -64,21 +64,22 @@ $(document).ready(function() {
 
   // If blurring not available for navigation bar, fall back to whiter background
   if ($("div#navigationBar").css("-webkit-backdrop-filter") == null) {
-		$("div#navigationBar").css({"background-color": "rgba(255, 255, 255, 0.99)"});
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      $("div#navigationBar").css({"background-color": "rgba(30, 30, 30, 0.99)"});
+    } else {
+      $("div#navigationBar").css({"background-color": "rgba(255, 255, 255, 0.99)"});
+    }
 	}
 
   // Sets up shadow below navigation bar when scrolling beyond the top
 	$(window).on("scroll", function() {
-		if ($(window).scrollTop() > 3) {
-			$("div#navigationBar").css({"box-shadow": "0px 1px 1px #EEEEEE"});
-		}
-		else {
-			$("div#navigationBar").css({"box-shadow": "initial"});
-		}
+    if ($(window).scrollTop() > 3) {
+      $("div#navigationBar").css({"box-shadow": "0px 1px 1px var(--navigationBarShadowColor)"});
+    }
+    else {
+      $("div#navigationBar").css({"box-shadow": "initial"});
+    }
 	});
-
-  // Sets up highlighting of buttons in the footer links
-
 })
 
 function highlightButton(button) {

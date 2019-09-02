@@ -155,6 +155,8 @@ div.caption p {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 1.4;
+
+  color: var(--labelColor);
 }
 
 div.sideCaption {
@@ -176,20 +178,7 @@ div.caption h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  color: #777;
-}
-
-div.textOnlyContent h1 {
-  margin: 0px;
-  padding: 0px;
-
-  font-size: 14pt;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
-  color: black;
-
-  text-align: center;
+  color: var(--secondaryLabelColor);
 }
 
 div.textOnlyContent h2 {
@@ -200,7 +189,7 @@ div.textOnlyContent h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  color: black;
+  color: var(--labelColor);
 
   text-align: center;
 }
@@ -214,19 +203,7 @@ div.textOnlyContent h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 1.4;
-  color: #777;
-}
-
-div.textOnlyContent h4 {
-  margin: 0px;
-  padding: 0px;
-
-  font-size: 10pt;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  line-height: 1.4;
-
-  text-align: center;
+  color: var(--secondaryLabelColor);
 }
 
 img#downloadResumeIcon {
@@ -248,6 +225,8 @@ div.textOnlyContent p {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 1.4;
+
+  color: var(--labelColor);
 }
 
 div.textOnlyContent strong {
@@ -259,6 +238,8 @@ div.textOnlyContent li {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 1.4;
+
+  color: var(--labelColor);
 }
 
 div.textOnlyContent li:not(:first-child) {
@@ -375,5 +356,18 @@ ul {
   }
   p#heroDetail {
     font-size: 12pt;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Captions for cards */
+  div.caption {
+    /* Dark blur effect */
+    background-color: rgba(40, 40, 40, 0.7);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  div.textOnlyContent {
+    background-color: #464642;
   }
 }

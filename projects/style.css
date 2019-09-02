@@ -102,7 +102,7 @@ h4.projectSubtitle {
 	margin: 0;
   margin-top: 8px;
 
-	color: rgb(128, 128, 128);
+	color: var(--secondaryLabelColor);
 }
 
 /* MARK: Project body */
@@ -122,6 +122,8 @@ p.projectText {
 	line-height: 1.4;
 	letter-spacing: 1px;
 	font-size: 12pt;
+
+  color: var(--labelColor);
 }
 
 /* MARK: Colors */
@@ -204,7 +206,7 @@ div.projectLinks a:not(:first-child) {
   img.projectIcon {
   	height: 90px;
   }
-  
+
   h4.projectSubtitle {
   	font-size: 13pt;
   }
